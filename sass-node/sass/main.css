@@ -1,0 +1,989 @@
+@charset "UTF-8";
+/*==============Importo las variables del archivo parcial: _variables.scss========================*/
+/*=============CSS de Inicio para los HTMLs===============*/
+* {
+  margin: 0;
+}
+
+body {
+  background-image: url(../../Fondos/Fondo_5.png);
+  z-index: 0;
+}
+
+/*====================Variables para el main.scss===========================*/
+/*====================Variables para el main.scss===========================*/
+/*=================================Defino los Mixins a usar========================================*/
+/*========================Iconos de Redes, Logo y barra de  búsqueda================================*/
+.divIconos {
+  background-color: #3a3939;
+}
+.divIconos__tabla {
+  margin: 0 auto;
+}
+.divIconos__tabla__iconoContacto {
+  width: 7.5rem;
+  height: 5rem;
+}
+
+.iconoPaginaWeb {
+  width: 12rem;
+  height: 12rem;
+  margin: 0.25rem 1rem 0 1rem;
+  transition: all 1.5s;
+}
+
+.iconoPaginaWeb:hover {
+  width: 15rem;
+  height: 15rem;
+}
+
+.cajaBusqueda {
+  width: 25rem;
+  border: 0.25rem solid #f6f6f6;
+  border-radius: 1rem;
+  background-color: #f6f6f6;
+  display: inline-block;
+  margin: 0 1rem 0 3rem;
+}
+
+.submitBusqueda {
+  background: teal;
+  display: inline-block;
+  border: 0.25rem solid teal;
+  border-radius: 0.5rem;
+  color: aliceblue;
+}
+
+@media (max-width: 576px) {
+  .divIconos__tabla__iconoContacto {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .cajaBusqueda {
+    display: inline-block;
+    width: 10rem;
+  }
+
+  .submitBusqueda {
+    display: inline-block;
+  }
+}
+/*===========================Aplicando SASS en el NavBar de los HTMls===============================*/
+.contenedorNavBar {
+  display: block;
+}
+.contenedorNavBar__collapse {
+  /*Modifico los items del Nav de Bootstrap*/
+  max-width: 100%;
+  justify-content: space-around;
+}
+.contenedorNavBar__collapse__seccionesWeb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contenedorNavBar__collapse__seccionesWeb__subSeccionesWeb {
+  position: absolute;
+  background-color: grey;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  display: none;
+  z-index: 20;
+}
+.contenedorNavBar__collapse__seccionesWeb__subSeccionesWeb li a {
+  font-size: 1rem;
+  display: block;
+  padding: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: whitesmoke;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 2s;
+}
+.contenedorNavBar__collapse__seccionesWeb li:hover .subSeccionesWeb {
+  /*Para poder desplegar el submenú*/
+  display: block;
+  font-size: 1.5rem;
+}
+.contenedorNavBar__collapse__seccionesWeb > li > a {
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.75rem;
+  padding: 0 1.5rem;
+  transition: all 2s;
+}
+.contenedorNavBar__collapse__seccionesWeb li a:hover {
+  color: #01019e;
+  /*Estilo al poner el cursor sobre c/u de las cajas del menú*/
+  font-size: 2rem;
+}
+
+@media (max-width: 576px) {
+  .seccionesWeb {
+    /*Para el despliegue del menú en formato de columna*/
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subSeccionesWeb {
+    /*Para que el despliegue del submenú no tape a los otros items principales*/
+    position: relative;
+  }
+}
+@media (min-width: 576px) and (max-width: 960px) {
+  .seccionesWeb {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subSeccionesWeb {
+    position: relative;
+  }
+}
+@media (min-width: 960px) and (max-width: 1024px) {
+  .seccionesWeb {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .subSeccionesWeb {
+    position: absolute;
+  }
+}
+/*===================Aplicando SASS en las secciones del archivo index.html========================*/
+.carousel {
+  width: 100%;
+  height: 45rem;
+}
+.carousel__imagenSlide {
+  width: 100%;
+  height: 45rem;
+}
+
+.sectionIndex {
+  color: aliceblue;
+  margin: 2rem auto;
+  font-size: 1.25rem;
+}
+
+.tituloSeccion {
+  color: gold;
+  display: block;
+  font-style: oblique;
+  font-weight: lighter;
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  text-align: initial;
+  line-height: 2.75rem;
+  padding: 1rem;
+  margin: 1.5rem 1rem 2.5rem 1rem;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: tituloPrincipal;
+          animation-name: tituloPrincipal;
+}
+
+@-webkit-keyframes tituloPrincipal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tituloPrincipal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.contenedorLocutor {
+  margin: 2rem 1rem 3rem 1rem;
+  padding: 1rem;
+  background: linear-gradient(to right, #2e2e2e, #444444);
+  display: inline-block;
+  /*Este display es para rellenar el color del background*/
+}
+.contenedorLocutor__caja {
+  display: table-cell;
+}
+.contenedorLocutor__caja__imagen {
+  width: 18rem;
+  height: 15rem;
+  display: block;
+  margin: auto;
+}
+.contenedorLocutor__caja__imagen:hover {
+  width: 20rem;
+  height: 17rem;
+}
+.contenedorLocutor__caja__subtitulo {
+  color: firebrick;
+  font-weight: bolder;
+  font-size: 1.8rem;
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.6rem;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 2rem 1rem;
+}
+.contenedorLocutor__caja__parrafo {
+  padding: 0.75rem 0.5rem;
+  color: azure;
+  font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: normal;
+  text-align: justify;
+}
+
+.contenedorProyecto {
+  margin: 2rem 1rem 3rem 1rem;
+  padding: 1rem;
+  background: linear-gradient(to right, #2e2e2e, #444444);
+  display: inline-block;
+  /*Este display es para rellenar el color del background*/
+}
+.contenedorProyecto__caja {
+  display: table-cell;
+}
+.contenedorProyecto__caja__imagen {
+  width: 14rem;
+  height: 12rem;
+  display: block;
+  margin: auto;
+  transition: height 2s, width 2s;
+}
+.contenedorProyecto__caja__imagen:hover {
+  width: 16rem;
+  height: 14rem;
+}
+.contenedorProyecto__caja__subtitulo {
+  padding: 0.5rem 0;
+  color: steelblue;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  line-height: 1.6rem;
+  display: flex;
+  justify-content: center;
+}
+.contenedorProyecto__caja__parrafo {
+  padding: 0.75rem 0.5rem;
+  color: aliceblue;
+  font-size: 1rem;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: normal;
+  text-align: justify;
+}
+
+@media (max-width: 576px) {
+  .contenedorLocutor__caja {
+    /*Para que el texto se vea debajo de la imagen*/
+    display: block;
+  }
+  .contenedorLocutor__caja__imagen {
+    width: 18rem;
+    height: 20rem;
+  }
+  .contenedorLocutor__caja__imagen:hover {
+    width: 19rem;
+    height: 23rem;
+  }
+
+  .contenedorProyecto__caja {
+    display: block;
+  }
+  .contenedorProyecto__caja__imagen {
+    width: 18rem;
+    height: 20rem;
+  }
+  .contenedorProyecto__caja__imagen:hover {
+    width: 19rem;
+    height: 23rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 960px) {
+  .contenedorLocutor__caja {
+    display: block;
+  }
+
+  .contenedorProyecto__caja {
+    display: block;
+  }
+}
+@media (min-width: 960px) and (max-width: 1024px) {
+  .contenedorLocutor__caja {
+    display: table-cell;
+  }
+
+  .contenedorProyecto__caja {
+    display: table-cell;
+  }
+}
+/*================Aplicando SASS en las secciones del archivo contacto.html=========================*/
+#tituloConsulta {
+  color: darkorange;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 1rem 0 1rem 1rem;
+}
+
+#subtituloConsulta {
+  color: darkcyan;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  text-align: left;
+  margin: 2rem 0 2rem 1rem;
+}
+
+.contenedorConsultas {
+  border: 0.2rem dashed cyan;
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 1rem;
+}
+
+#legendFormulario {
+  font-size: 2rem;
+}
+
+.labels {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+#inputNombre {
+  background: whitesmoke;
+  margin: 1rem 0 1rem 0;
+}
+
+#inputApellido {
+  background: whitesmoke;
+  margin: 1rem 0 1rem 0;
+}
+
+#inputEmail {
+  background: whitesmoke;
+  margin: 1rem 0 1rem 0;
+}
+
+#consultaStock {
+  background: white;
+  display: block;
+  margin: 1rem 0 1rem 0;
+  width: 50rem;
+}
+
+#checking {
+  margin: 1rem;
+}
+
+#resetTexto {
+  color: burlywood;
+  background: #2a3036;
+  margin: 1rem 1rem 1rem 1rem;
+  width: 7rem;
+  height: 2rem;
+  transition: all 2.5s;
+}
+
+#resetTexto:hover {
+  width: 10rem;
+  height: 3rem;
+}
+
+#submitEnviar {
+  color: burlywood;
+  background: #2a3036;
+  margin: 1rem 1rem 1rem 1rem;
+  width: 4rem;
+  height: 2rem;
+  transition: all 2.5s;
+}
+
+#submitEnviar:hover {
+  width: 6rem;
+  height: 3rem;
+}
+
+.formularioContacto {
+  color: azure;
+}
+
+@media (max-width: 576px) {
+  #consultaStock {
+    width: 15rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 960px) {
+  #consultaStock {
+    width: 25rem;
+  }
+}
+@media (min-width: 960px) and (max-width: 1024px) {
+  #consultaStock {
+    width: 30rem;
+  }
+}
+/*================Aplicando SASS en las secciones del archivo profesionales.html====================*/
+.nombreActor {
+  color: gold;
+  margin: 2rem 0 2rem 1rem;
+}
+
+.cajaProfesional {
+  display: inline-flex;
+  align-items: center;
+  margin: 1rem 1rem 3rem 1rem;
+  background-color: #222222;
+}
+.cajaProfesional__imagen {
+  padding: 1rem;
+  width: 300px;
+  height: 350px;
+  transition: width 2s, height 2s;
+}
+.cajaProfesional__imagen:hover {
+  width: 350px;
+  height: 400px;
+}
+.cajaProfesional__datos {
+  padding: 1rem;
+}
+.cajaProfesional__datos__resumen {
+  color: azure;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: justify;
+  padding: 0 1rem 0 1rem;
+}
+
+#listasDeLeto {
+  display: inline-flex;
+  padding: 2rem;
+  margin: auto;
+  font-size: 1rem;
+}
+
+#listasDeAdrian {
+  display: inline-flex;
+}
+
+.publicidadesPersonajes {
+  color: azure;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+.listaPublicidades {
+  color: azure;
+  font-size: 1.2rem;
+}
+
+.listaPersonajes {
+  color: azure;
+  font-size: 1.2rem;
+}
+
+#botonModalInformacion {
+  margin: 1.5rem 1rem 1.25rem 1rem;
+}
+
+@media (max-width: 576px) {
+  .cajaProfesional {
+    display: block;
+    max-width: 100%;
+  }
+  .cajaProfesional__imagen {
+    width: 20rem;
+    height: 18rem;
+  }
+  .cajaProfesional__imagen:hover {
+    width: 21rem;
+    height: 20rem;
+  }
+
+  #listasDeLeto {
+    display: inline;
+  }
+
+  #listasDeAdrian {
+    display: inline;
+  }
+
+  .delimitadorIframesProfesionales {
+    max-width: 100%;
+  }
+
+  .iFrameProfesionales {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+}
+@media (min-width: 576px) and (max-width: 960px) {
+  .cajaProfesional {
+    display: block;
+  }
+
+  .delimitadorIframesProfesionales {
+    width: 100%;
+    margin: auto;
+  }
+
+  .iFrameProfesionales {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+}
+@media (min-width: 960px) and (max-width: 1024px) {
+  .cajaProfesional {
+    display: inline-flex;
+  }
+
+  .delimitadorIframesProfesionales {
+    width: 100%;
+    margin: auto;
+  }
+
+  .iFrameProfesionales {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+}
+/*=================Aplicando SASS en las secciones del archivo galería.html=========================*/
+#nombreSeccionImagenes {
+  color: gold;
+  font-size: 2rem;
+  line-height: normal;
+  text-align: left;
+  margin: 2rem 1rem 2rem 1rem;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-name: seccionImagenes;
+          animation-name: seccionImagenes;
+}
+
+@-webkit-keyframes seccionImagenes {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes seccionImagenes {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.contenedorEstudio {
+  margin: 2rem 1rem 3rem 1rem;
+  padding: 1rem;
+  background-color: #2b2a2a;
+  display: inline-block;
+  /*Este display es para rellenar el color del background*/
+}
+.contenedorEstudio__caja {
+  display: table-cell;
+}
+.contenedorEstudio__caja__imagen {
+  width: 18rem;
+  height: 15rem;
+  display: block;
+  margin: auto;
+  transition: width 2s, height 2s;
+}
+.contenedorEstudio__caja__imagen:hover {
+  width: 21rem;
+  height: 18rem;
+}
+.contenedorEstudio__caja__nombre {
+  color: #f31844;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.contenedorEstudio__caja__descripcion {
+  color: azure;
+  font-family: "Comic Neue", cursive;
+  font-size: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+#nombreSeccionAudios {
+  color: gold;
+  font-size: 2rem;
+  line-height: normal;
+  text-align: left;
+  margin: 2rem 1rem 2rem 1rem;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-name: seccionAudios;
+          animation-name: seccionAudios;
+}
+
+@-webkit-keyframes seccionAudios {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes seccionAudios {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.contenidoAudios {
+  margin: 2rem 1rem 3rem 1rem;
+  padding: 1rem;
+  background: linear-gradient(to right, #242424, #00005f);
+  display: inline-block;
+  /*Este display es para rellenar el color del background*/
+}
+.contenidoAudios__caja {
+  display: table-cell;
+  padding: 1.5rem;
+}
+.contenidoAudios__caja__personaje {
+  color: #e3fff0;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1rem;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+.contenidoAudios__caja__audio {
+  display: block;
+  margin: auto;
+  -webkit-animation: jackInTheBox;
+          animation: jackInTheBox;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+.contenidoAudios__caja__subtitulo {
+  color: azure;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1rem;
+  padding: 1rem 0 1rem 0;
+}
+
+#nombreSeccionVideos {
+  color: gold;
+  font-size: 2rem;
+  line-height: normal;
+  text-align: left;
+  margin: 2rem 1rem 2rem 1rem;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-name: seccionVideos;
+          animation-name: seccionVideos;
+}
+
+@-webkit-keyframes seccionVideos {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes seccionVideos {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 576px) {
+  .contenedorEstudio {
+    display: block;
+  }
+
+  .contenedorEstudio__caja {
+    display: block;
+  }
+
+  .contenedorEstudio__caja__imagen {
+    width: 18rem;
+    height: 12rem;
+  }
+
+  .contenedorEstudio__caja__imagen:hover {
+    width: 19rem;
+    height: 15rem;
+  }
+
+  .contenidoAudios {
+    display: block;
+  }
+
+  .contenidoAudios__caja {
+    display: block;
+  }
+
+  .contenidoAudios__caja__audio {
+    margin: 0;
+    width: 15rem;
+  }
+
+  .delimitadorIframesGaleria {
+    width: 100%;
+    margin: auto;
+  }
+
+  .iFrameGaleria {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+}
+@media (min-width: 576px) and (max-width: 960px) {
+  .contenedorEstudio {
+    display: block;
+  }
+
+  .contenedorEstudio__caja {
+    display: block;
+  }
+
+  .contenidoAudios {
+    display: block;
+  }
+
+  .contenidoAudios__caja {
+    display: block;
+  }
+
+  .contenidoAudios__caja__audio {
+    margin: 0;
+    width: 15rem;
+  }
+
+  .delimitadorIframesGaleria {
+    width: 100%;
+    margin: auto;
+  }
+
+  .iFrameGaleria {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+}
+@media (min-width: 960px) and (max-width: 1024px) {
+  .contenedorEstudio {
+    display: inline-block;
+  }
+
+  .contenedorEstudio__caja {
+    display: table-cell;
+  }
+
+  .contenidoAudios__caja__audio {
+    margin: 0;
+    width: 16rem;
+  }
+
+  .delimitadorIframesGaleria {
+    width: 100%;
+    margin: auto;
+  }
+
+  .iFrameGaleria {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+  }
+}
+/*================Aplicando SASS en las secciones del archivo egresados.html========================*/
+.gridEgresados {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  width: auto;
+  height: 100vh;
+}
+
+.seccionesEgresados {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.25rem;
+  background-color: #252525;
+  height: 100%;
+  color: aliceblue;
+}
+.seccionesEgresados__titulo {
+  font-size: 3rem;
+  color: gold;
+  margin: 2rem 1rem 2rem 1rem;
+  -webkit-animation-name: animacionTituloEgresados;
+          animation-name: animacionTituloEgresados;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+@-webkit-keyframes animacionTituloEgresados {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animacionTituloEgresados {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.seccionesEgresados__parrafo-1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: justify;
+  padding-bottom: 1rem;
+}
+.seccionesEgresados__parrafo-2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: justify;
+  padding-bottom: 1rem;
+}
+.seccionesEgresados__lista {
+  list-style: decimal-leading-zero;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+/*==================Aplicando SASS en las secciones del archivo empresas.html========================*/
+.gridEmpresas {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  width: auto;
+}
+
+.tituloPrincipalEmpresas {
+  color: #ffb731;
+  padding: 1.5rem 1rem 2rem 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 3rem;
+}
+
+.empresa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.empresa__division {
+  display: inline-flex;
+  padding: 1rem;
+  align-items: center;
+}
+.empresa__division__imagen {
+  width: 350px;
+  height: 300px;
+  transition: width 2s, height 2s;
+}
+.empresa__division__imagen:hover {
+  width: 450px;
+  height: 400px;
+}
+.empresa__division__descripcion {
+  display: block;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+@media (max-width: 576px) {
+  .empresa__division {
+    display: block;
+  }
+  .empresa__division__imagen {
+    display: block;
+    margin: 0 auto;
+    width: 10rem;
+    height: 15rem;
+  }
+  .empresa__division__imagen:hover {
+    width: 12rem;
+    height: 18rem;
+  }
+}
+/*======================Aplicando SASS en el footer de los archivos HTML=============================*/
+.footer {
+  display: table;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: white;
+  background-color: #23272c;
+  width: 100%;
+  margin: 0 auto;
+}
+.footer__tabla {
+  margin: 0 auto;
+}
+.footer__tabla__seccion {
+  padding: 0 0.75rem;
+}
+
+#copyRight {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .footer {
+    font-size: 0.6rem;
+  }
+}/*# sourceMappingURL=main.css.map */
