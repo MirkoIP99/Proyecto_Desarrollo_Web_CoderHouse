@@ -729,6 +729,14 @@
     }
 }
 
+@media (max-width: 576px){
+    @for $i from 1 through 2{
+        .seccionesEgresados__parrafo-#{$i}{
+            font-size: 1.35rem;
+        }
+    }
+}
+
 /*==================Aplicando SASS en las secciones del archivo empresas.html========================*/
 
 .gridEmpresas{

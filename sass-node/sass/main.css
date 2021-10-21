@@ -844,6 +844,15 @@ body {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 576px) {
+  .seccionesEgresados__parrafo-1 {
+    font-size: 1.35rem;
+  }
+
+  .seccionesEgresados__parrafo-2 {
+    font-size: 1.35rem;
+  }
+}
 /*==================Aplicando SASS en las secciones del archivo empresas.html========================*/
 .gridEmpresas {
   display: grid;
