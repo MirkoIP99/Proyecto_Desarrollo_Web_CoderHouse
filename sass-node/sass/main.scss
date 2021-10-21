@@ -208,7 +208,7 @@
         &__parrafo{
             padding: 0.75rem 0.5rem;
             color: $colorAzure;
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             line-height: normal;
             text-align: justify;
@@ -247,7 +247,7 @@
         &__parrafo{
             padding: 0.75rem 0.5rem;
             color: $colorAliceBlue;
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             line-height: normal;
             text-align: justify;
@@ -272,6 +272,11 @@
         &__imagen:hover{
             @include alto_y_ancho(19rem, 23rem);
         }
+        &__parrafo{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.35rem;
+            line-height: 1.7rem;
+        }
     }
     .contenedorProyecto__caja{
         display: block;
@@ -281,6 +286,11 @@
         }
         &__imagen:hover{
             @include alto_y_ancho(19rem, 23rem);
+        }
+        &__parrafo{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.35rem;
+            line-height: 1.7rem;
         }
     }
 }
@@ -544,8 +554,8 @@
         }
         &__descripcion{
             color: $colorAzure;
-            font-family: 'Comic Neue', cursive;
-            font-size: 1rem;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
             padding: 1rem 1rem 1rem 1rem;
         }
     }

@@ -237,7 +237,7 @@ body {
 .contenedorLocutor__caja__parrafo {
   padding: 0.75rem 0.5rem;
   color: azure;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   line-height: normal;
   text-align: justify;
@@ -277,7 +277,7 @@ body {
 .contenedorProyecto__caja__parrafo {
   padding: 0.75rem 0.5rem;
   color: aliceblue;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   line-height: normal;
   text-align: justify;
@@ -305,6 +305,11 @@ body {
     width: 19rem;
     height: 23rem;
   }
+  .contenedorLocutor__caja__parrafo {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 1.35rem;
+    line-height: 1.7rem;
+  }
 
   .contenedorProyecto__caja {
     display: block;
@@ -316,6 +321,11 @@ body {
   .contenedorProyecto__caja__imagen:hover {
     width: 19rem;
     height: 23rem;
+  }
+  .contenedorProyecto__caja__parrafo {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 1.35rem;
+    line-height: 1.7rem;
   }
 }
 @media (min-width: 576px) and (max-width: 960px) {
@@ -604,8 +614,8 @@ body {
 }
 .contenedorEstudio__caja__descripcion {
   color: azure;
-  font-family: "Comic Neue", cursive;
-  font-size: 1rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
   padding: 1rem 1rem 1rem 1rem;
 }
 
