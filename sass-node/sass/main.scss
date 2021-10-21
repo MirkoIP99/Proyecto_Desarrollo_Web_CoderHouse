@@ -256,6 +256,13 @@
 }
 
 @media (max-width: 576px){
+    .carousel{
+        @include alto_y_ancho($width100, 25rem);
+    
+        &__imagenSlide{
+            @include alto_y_ancho($width100, 25rem);
+        }
+    }
     .contenedorLocutor__caja{ /*Para que el texto se vea debajo de la imagen*/
         display: block;
 
