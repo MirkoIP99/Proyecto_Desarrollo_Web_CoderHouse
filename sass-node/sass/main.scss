@@ -1,0 +1,838 @@
+/*==============Importo las variables del archivo parcial: _variables.scss========================*/
+
+@import "./parciales/reset";
+@import "./parciales/variables";
+@import "./parciales/mixins";
+@import "./parciales/responive";
+@import "./parciales/maps";
+
+/*========================Iconos de Redes, Logo y barra de  búsqueda================================*/
+
+.divIconos{
+    background-color: rgb(58, 57, 57);
+
+    &__tabla{
+        margin: 0 auto;
+
+        &__iconoContacto{
+            @include alto_y_ancho(7.5rem, 5rem);
+        }
+    }
+}
+
+.iconoPaginaWeb{
+    @include alto_y_ancho(12rem, 12rem);
+    margin: 0.25rem 1rem 0 1rem;
+    transition: all 1.5s;
+}
+
+.iconoPaginaWeb:hover{
+    @include alto_y_ancho(15rem, 15rem);
+}
+
+.cajaBusqueda{
+    width: map-get($map: $varsCajaBusqueda, $key: 'ancho');
+	border: map-get($map: $varsCajaBusqueda, $key: 'borde');
+	border-radius: map-get($map: $varsCajaBusqueda, $key: 'bordeRadio');
+	background-color: map-get($map: $varsCajaBusqueda, $key: 'colorFondo');
+	display: map-get($map: $varsCajaBusqueda, $key: 'display');
+    margin: map-get($map: $varsCajaBusqueda, $key: 'margin');
+}
+
+.submitBusqueda{
+    background: $colorTeal;
+    display: inline-block;
+    border: 0.25rem solid $colorTeal;
+	border-radius: 0.5rem;
+    color: $colorAliceBlue;
+}
+
+@include movilHeader{
+    .divIconos__tabla__iconoContacto{
+        @include alto_y_ancho(5rem, 5rem);
+    }
+    .cajaBusqueda{
+        display: map-get($map: $varsCajaBusqueda, $key: 'display');
+        width: 10rem;
+    }
+    .submitBusqueda{
+        display: map-get($map: $varsCajaBusqueda, $key: 'display');
+    }
+}
+
+/*===========================Aplicando SASS en el NavBar de los HTMls===============================*/
+
+.contenedorNavBar{
+    display: block;
+
+    &__collapse{ /*Modifico los items del Nav de Bootstrap*/
+        max-width: $width100;
+        justify-content: space-around;
+
+        &__seccionesWeb{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            &__subSeccionesWeb{
+                position: absolute;
+                background-color: $colorGrey;
+                padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+                display: none;
+                z-index: 20;
+            }
+            &__subSeccionesWeb li a{
+                font-size: 1rem;
+                display: block;
+                padding: 1rem;
+                font-size: 1.25rem;
+                text-decoration: none;
+                color: $colorWhiteSmoke;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                transition: all 2s;
+            }
+        }
+        &__seccionesWeb li:hover .subSeccionesWeb{ /*Para poder desplegar el submenú*/
+            display: block;
+            font-size: 1.5rem;
+        }
+        &__seccionesWeb > li > a{
+            text-decoration: none;
+            color: $colorWhite;
+            width: $width100;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.75rem;
+            padding: 0 1.5rem;
+            transition: all 2s;
+        }
+        &__seccionesWeb li a:hover{
+            color: rgb(1, 1, 158);    /*Estilo al poner el cursor sobre c/u de las cajas del menú*/
+            font-size: 2rem;
+        }
+    }
+}
+
+@include movilNavBar{
+    .seccionesWeb{ /*Para el despliegue del menú en formato de columna*/
+        flex-direction: column;
+        align-items: center;
+    }
+    .subSeccionesWeb{ /*Para que el despliegue del submenú no tape a los otros items principales*/
+        position: relative;
+    }
+}
+@include tabletNavBar{
+    .seccionesWeb{
+        flex-direction: column;
+        align-items: center;
+    }
+    .subSeccionesWeb{
+        position: relative;
+    }
+}
+@include netbookNavBar{
+    .seccionesWeb{
+        flex-direction: row;
+        align-items: center;
+    }
+    .subSeccionesWeb{
+        position: absolute;
+    }
+}
+
+/*===================Aplicando SASS en las secciones del archivo index.html========================*/
+
+.carousel{
+    @include alto_y_ancho($width100, 45rem);
+
+    &__imagenSlide{
+        @include alto_y_ancho($width100, 45rem);
+    }
+}
+
+.sectionIndex{
+    color: $colorAliceBlue;
+    margin: 2rem auto;
+    font-size: 1.25rem;
+}
+
+.tituloSeccion{
+    color: $colorGold;
+    display: block;
+    font-style: oblique;
+    font-weight: lighter;
+    font-size: 3rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: initial;
+    line-height: 2.75rem;
+    padding: 1rem;
+    margin: 1.5rem 1rem 2.5rem 1rem;
+    animation-duration: 4s;
+    animation-name: tituloPrincipal;
+}
+
+@keyframes tituloPrincipal{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.contenedorLocutor{
+    margin: 2rem 1rem 3rem 1rem;
+    padding: 1rem;
+    background: linear-gradient(to right, rgb(46, 46, 46), rgb(68, 68, 68));
+    display: inline-block; /*Este display es para rellenar el color del background*/
+
+    &__caja{
+        display: table-cell;
+
+        &__imagen{
+            @include alto_y_ancho(18rem, 15rem);
+            display: block;
+            margin: auto;
+        }
+        &__imagen:hover{
+            @include alto_y_ancho(20rem, 17rem);
+        }
+        &__subtitulo{
+            color: $colorFirebrick;
+            font-weight: bolder;
+            font-size: 1.8rem;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6rem;
+            display:flex;
+            justify-content: center;
+            padding: 2rem 1rem 2rem 1rem;
+        }
+        &__parrafo{
+            padding: 0.75rem 0.5rem;
+            color: $colorAzure;
+            font-size: 1.5rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: normal;
+            text-align: justify;
+        }
+    }
+}
+
+.contenedorProyecto{
+    margin: 2rem 1rem 3rem 1rem;
+    padding: 1rem;
+    background: linear-gradient(to right, rgb(46, 46, 46), rgb(68, 68, 68));
+    display: inline-block; /*Este display es para rellenar el color del background*/
+
+    &__caja{
+        display: table-cell;
+
+        &__imagen{
+            @include alto_y_ancho(14rem, 12rem);
+            display: block;
+            margin: auto;
+            transition: height 2s, width 2s;
+        }
+        &__imagen:hover{
+            @include alto_y_ancho(16rem, 14rem);
+        }
+        &__subtitulo{
+            padding: 0.5rem 0;
+            color: $colorSteelblue;
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            line-height: 1.6rem;
+            display: flex;
+            justify-content: center;
+        }
+        &__parrafo{
+            padding: 0.75rem 0.5rem;
+            color: $colorAliceBlue;
+            font-size: 1.5rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: normal;
+            text-align: justify;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .carousel{
+        @include alto_y_ancho($width100, 25rem);
+    
+        &__imagenSlide{
+            @include alto_y_ancho($width100, 25rem);
+        }
+    }
+    .contenedorLocutor__caja{ /*Para que el texto se vea debajo de la imagen*/
+        display: block;
+
+        &__imagen{
+            @include alto_y_ancho(18rem, 20rem);
+        }
+        &__imagen:hover{
+            @include alto_y_ancho(19rem, 23rem);
+        }
+        &__parrafo{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.35rem;
+            line-height: 1.7rem;
+        }
+    }
+    .contenedorProyecto__caja{
+        display: block;
+
+        &__imagen{
+            @include alto_y_ancho(18rem, 20rem);
+        }
+        &__imagen:hover{
+            @include alto_y_ancho(19rem, 23rem);
+        }
+        &__parrafo{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.35rem;
+            line-height: 1.7rem;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 960px){
+    .contenedorLocutor__caja{
+        display: block;
+    }
+    .contenedorProyecto__caja{
+        display: block;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1024px){
+    .contenedorLocutor__caja{
+        display: table-cell;
+    }
+    .contenedorProyecto__caja{
+        display: table-cell;
+    }
+}
+
+/*================Aplicando SASS en las secciones del archivo contacto.html=========================*/
+
+#tituloConsulta{
+    color: rgb(255, 140, 0);
+    font-size: 2rem;
+    line-height: 2rem;
+    margin: 1rem 0 1rem 1rem;
+}
+
+#subtituloConsulta{
+    color: $colorDarkCyan;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    text-align: left;
+    margin: 2rem 0 2rem 1rem;
+}
+
+.contenedorConsultas{
+    border: 0.2rem dashed $colorCyan;
+    margin: 1rem 2rem 1rem 2rem;
+    padding: 1rem;
+}
+
+#legendFormulario{
+    font-size: 2rem;
+}
+
+.labels{
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+@each $elementoContacto in Nombre, Apellido, Email,{
+    #input#{$elementoContacto}{
+        background: $colorWhiteSmoke;
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+#consultaStock{
+    background: $colorWhite;
+    display: block;
+    margin: 1rem 0 1rem 0;
+    width: 50rem;
+}
+
+#checking{
+    margin: 1rem;
+}
+
+#resetTexto{
+    color: $colorBurlywood;
+    background: rgb(42, 48, 54);
+    margin: 1rem 1rem 1rem 1rem;
+    @include alto_y_ancho(7rem, 2rem);
+    transition: all 2.5s;
+}
+
+#resetTexto:hover{
+    @include alto_y_ancho(10rem, 3rem);
+}
+
+#submitEnviar{
+    color: $colorBurlywood;
+    background: rgb(42, 48, 54);
+    margin: 1rem 1rem 1rem 1rem;
+    @include alto_y_ancho(4rem, 2rem);
+    transition: all 2.5s;
+}
+
+#submitEnviar:hover{
+    @include alto_y_ancho(6rem, 3rem);
+}
+
+.formularioContacto{
+    color: $colorAzure;
+}
+
+@media (max-width: 576px){
+    #consultaStock{
+        width: 15rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 960px){
+    #consultaStock{
+        width: 25rem;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1024px){
+    #consultaStock{
+        width: 30rem;
+    }
+}
+
+/*================Aplicando SASS en las secciones del archivo profesionales.html====================*/
+
+.nombreActor{
+    color: $colorGold;
+    margin: 2rem 0 2rem 1rem;
+}
+
+.cajaProfesional{
+    display: inline-flex;
+    align-items: center;
+    margin: 1rem 1rem 3rem 1rem;
+    background-color: rgb(34, 34, 34);
+
+    &__imagen{
+        padding: 1rem;
+        @include alto_y_ancho(300px, 350px);
+        transition: width 2s, height 2s;
+    }
+    &__imagen:hover{
+        @include alto_y_ancho(350px, 400px);
+    }
+    &__datos{
+        padding: 1rem;
+
+        &__resumen{
+            color: $colorAzure;
+            font-weight: normal;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-align: justify;
+            padding: 0 1rem 0 1rem;
+        }
+    }
+}
+
+#listasDeLeto{
+    display: inline-flex;
+    padding: 2rem;
+    margin: auto;
+    font-size: 1rem;
+}
+
+#listasDeAdrian{
+    display: inline-flex;
+}
+
+.iFrameProfesionales{
+    padding: 1rem;
+}
+
+.publicidadesPersonajes{
+    color: $colorAzure;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+@each $claseDeLista in Publicidades, Personajes {
+    .lista#{$claseDeLista}{
+        color: $colorAzure;
+        font-size: 1.2rem;
+    }
+}
+
+#botonModalInformacion{
+    margin: 1.5rem 1rem 1.25rem 1rem;
+}
+
+@media (max-width: 576px){
+    .cajaProfesional{
+        display: block;
+        max-width: 100%;
+
+        &__imagen{
+            @include alto_y_ancho(20rem, 18rem);
+        }
+        &__imagen:hover{
+            @include alto_y_ancho(21rem, 20rem);
+        }
+    }
+    @each $locutor in Leto, Adrian {
+        #listasDe#{$locutor}{
+            display: inline;
+        }   
+    }
+}
+
+@media (min-width: 576px) and (max-width: 960px){
+    .cajaProfesional{
+        display: block;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1024px){
+    .cajaProfesional{
+        display: inline-flex;
+    }
+}
+
+/*=================Aplicando SASS en las secciones del archivo galería.html=========================*/
+
+#nombreSeccionImagenes{
+    color: $colorGold;
+    font-size: 2rem;
+    line-height: normal;
+    text-align: left;
+    margin: 2rem 1rem 2rem 1rem;
+    animation-duration: 2.5s;
+    animation-name: seccionImagenes;
+}
+
+@keyframes seccionImagenes{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.contenedorEstudio{
+    margin: 2rem 1rem 3rem 1rem;
+    padding: 1rem;
+    background-color: rgb(43, 42, 42);
+    display: inline-block; /*Este display es para rellenar el color del background*/
+
+    &__caja{
+        display: table-cell;
+
+        &__imagen{
+            @include alto_y_ancho(18rem, 15rem);
+            display: block;
+            margin: auto;
+            transition: width 2s, height 2s;
+        }
+        &__imagen:hover{
+            @include alto_y_ancho(21rem, 18rem);
+        }
+        &__nombre{
+            color: rgb(243, 24, 68);
+            font-size: 2rem;
+            text-align: center;
+            padding: 1.5rem 1rem 1.5rem 1rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        &__descripcion{
+            color: $colorAzure;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            padding: 1rem 1rem 1rem 1rem;
+        }
+    }
+}
+
+#nombreSeccionAudios{
+    color: $colorGold;
+    font-size: 2rem;
+    line-height: normal;
+    text-align: left;
+    margin: 2rem 1rem 2rem 1rem;
+    animation-duration: 2.5s;
+    animation-name: seccionAudios;
+}
+
+@keyframes seccionAudios{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.contenidoAudios{
+    margin: 2rem 1rem 3rem 1rem;
+    padding: 1rem;
+    background: linear-gradient(to right, rgb(36, 36, 36), rgb(0, 0, 95));
+    display: inline-block; /*Este display es para rellenar el color del background*/
+
+    &__caja{
+        display: table-cell;
+        padding: 1.5rem;
+
+        &__personaje{
+            color: rgb(227, 255, 240);
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 1rem;
+            padding: 1rem 0.5rem 1rem 0.5rem;
+        }
+        &__audio{
+            display: block;
+            margin: auto;
+            animation: jackInTheBox;
+            animation-duration: 2s;
+        }
+        &__subtitulo{
+            color: $colorAzure;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1rem;
+            padding: 1rem 0 1rem 0;
+        }
+    }
+}
+
+#nombreSeccionVideos{
+    color: $colorGold;
+    font-size: 2rem;
+    line-height: normal;
+    text-align: left;
+    margin: 2rem 1rem 2rem 1rem;
+    animation-duration: 2.5s;
+    animation-name: seccionVideos;
+}
+
+@keyframes seccionVideos{
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.iFrameGaleria{
+    padding: 1rem;
+}
+
+@media (max-width: 576px){
+    .contenedorEstudio{
+        display: block;
+    }
+    .contenedorEstudio__caja{
+        display: block;
+    }
+    .contenedorEstudio__caja__imagen{
+        @include alto_y_ancho(18rem, 12rem);
+    }
+    .contenedorEstudio__caja__imagen:hover{
+        @include alto_y_ancho(19rem, 15rem);
+    }
+    .contenidoAudios{
+        display: block;
+    }
+    .contenidoAudios__caja{
+        display: block;
+    }
+    .contenidoAudios__caja__audio{
+        margin: 0;
+        width: 15rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 960px){
+    .contenedorEstudio{
+        display: block;
+    }
+    .contenedorEstudio__caja{
+        display: block;
+    }
+    .contenidoAudios{
+        display: block;
+    }
+    .contenidoAudios__caja{
+        display: block;
+    }
+    .contenidoAudios__caja__audio{
+        margin: 0;
+        width: 15rem;
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1024px){
+    .contenedorEstudio{
+        display: inline-block;
+    }
+    .contenedorEstudio__caja{
+        display: table-cell;
+    }
+    .contenidoAudios__caja__audio{
+        margin: 0;
+        width: 16rem;
+    }
+}
+
+/*================Aplicando SASS en las secciones del archivo egresados.html========================*/
+
+.gridEgresados{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+    @include alto_y_ancho(auto, 100vh);
+}
+
+.seccionesEgresados{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1.25rem;
+    background-color: rgb(37, 37, 37);
+    height: $height100;
+    color: $colorAliceBlue;
+    
+    &__titulo{
+        font-size: 3rem;
+        color: $colorGold;
+        margin: 2rem 1rem 2rem 1rem;
+        animation-name: animacionTituloEgresados;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-delay: 3s;
+    }
+    @keyframes animacionTituloEgresados{
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    @for $i from 1 through 2{
+        &__parrafo-#{$i}{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            text-align: justify;
+            padding-bottom: 1rem;
+        }
+    }
+    &__lista{
+        list-style: decimal-leading-zero;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px){
+    @for $i from 1 through 2{
+        .seccionesEgresados__parrafo-#{$i}{
+            font-size: 1.35rem;
+        }
+    }
+}
+
+/*==================Aplicando SASS en las secciones del archivo empresas.html========================*/
+
+.gridEmpresas{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    width: auto;
+}
+
+.tituloPrincipalEmpresas{
+    color: rgb(255, 183, 49);
+    padding: 1.5rem 1rem 2rem 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+}
+
+.empresa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    &__division{
+        display: inline-flex;
+        padding: 1rem;
+        align-items: center;
+
+        &__imagen{
+            @include alto_y_ancho(350px, 300px);
+            transition: width 2s, height 2s;
+        }
+        &__imagen:hover{
+            @include alto_y_ancho(450px, 400px);
+        }
+        &__descripcion{
+            display: block;
+            color: $colorWhite;
+            font-size: 1.5rem;
+            padding: 1rem 1rem 1rem 1rem;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .empresa__division{
+        display: block;
+
+        &__imagen{
+            display: block;
+            margin: 0 auto;
+            @include alto_y_ancho(10rem, 15rem);
+        }
+        &__imagen:hover{
+            @include alto_y_ancho(12rem, 18rem);
+        }
+    }
+}
+
+/*======================Aplicando SASS en el footer de los archivos HTML=============================*/
+
+.footer{
+    display: table;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: $colorWhite;
+    background-color: rgb(35, 39, 44);
+    width: $width100;
+    margin: 0 auto;
+
+    &__tabla{
+        margin: 0 auto;
+
+        &__seccion{
+            padding: 0 0.75rem;
+        }
+    }
+}
+#copyRight{
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+@include movilFooter{
+    .footer{
+        font-size: 0.6rem;
+    }
+}

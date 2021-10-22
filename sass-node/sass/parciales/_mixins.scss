@@ -1,0 +1,9 @@
+@import "./variables";
+@import "./responive";
+
+/*=================================Defino los Mixins a usar========================================*/
+
+@mixin alto_y_ancho($width, $height) {
+    width: $width;
+    height: $height;
+}
