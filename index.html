@@ -99,97 +99,262 @@
                 </div>
             </div>
 
-            <section id="why-us" class="why-us">
-                <div class="container sectionIndex">
-          
-                    <div class="row no-gutters">
-          
-                        <div class="col-lg-4 col-md-6 content-item">
-                            <h4>Reels de Audio</h4>
-                            <p>Te dejamos reels de audio de nuestros Proyectos</p>
-                        </div>
-          
-                        <div class="col-lg-4 col-md-6 content-item">
-                            <h4>Videos</h4>
-                            <p>Sección de videos de entrevistas y fragmentos de proyectos</p>
-                        </div>
-          
-                        <div class="col-lg-4 col-md-6 content-item">
-                            <h4>Por qué estudiar Locución</h4>
-                            <p>Secciones de por qué estudiar Locución/Doblaje</p>
-                        </div>
-          
-                        <div class="col-lg-4 col-md-6 content-item">
-                            <h4>Nuestro equipo</h4>
-                            <p>Algunos de nuestros profesionales también son docentes en el área de la locución y el doblaje</p>
-                        </div>
-          
-                        <div class="col-lg-4 col-md-6 content-item">
-                            <h4>Horarios</h4>
-                            <p>Las consultas se priorizan en el horario: 10-19hs (De Lunes a Viernes)</p>
-                        </div>
-          
-                        <div class="col-lg-4 col-md-6 content-item">
-                            <h4>Logros</h4>
-                            <p>Participación en las áreas de la locución comercial así como doblaje en series, películas, Video-Juegos y Audio-Libros</p>
-                        </div>
-          
+            <div class="contenedorCards">
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">Reels de Audio</div>
+                    <div class="card-body">
+                        <p class="card-text">Te dejamos reels de audio de nuestros Proyectos</p>
                     </div>
                 </div>
-            </section>
+
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">Videos</div>
+                    <div class="card-body">
+                        <p class="card-text">Sección de videos de entrevistas y fragmentos de proyectos</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">¿Por qué estudiar Locución?</div>
+                    <div class="card-body">
+                        <p class="card-text">Secciones de por qué estudiar Locución/Doblaje</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">Nuestro equipo</div>
+                    <div class="card-body">
+                        <p class="card-text">Algunos de nuestros profesionales también son docentes en el área de la locución y el doblaje</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">Horarios</div>
+                    <div class="card-body">
+                        <p class="card-text">Las consultas se priorizan en el horario: 10-19hs (De Lunes a Viernes)</p>
+                    </div>
+                </div>
+
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">Logros</div>
+                    <div class="card-body">
+                        <p class="card-text">Participación en las áreas de la locución comercial así como doblaje en series, películas, Video-Juegos y Audio-Libros</p>
+                    </div>
+                </div>
+            </div>
 
             <h1><b class="tituloSeccion"><u>Nuestros Profesionales</u></b></h1>
 
             <div class="contenedorLocutor">
-                <div class="contenedorLocutor__caja">
-                    <img src="imagenes/Leto_Dugatkin.jpg" alt="Locutor/Doblajista: Leto Dugatkin" class="contenedorLocutor__caja__imagen">
-                    <h2 class="contenedorLocutor__caja__subtitulo">Leandro "Leto" Dugatkin</h2>
-                    <p class="contenedorLocutor__caja__parrafo">Leandro "Leto" Dugatkin es un actor de doblaje, locutor y periodista argentino.
-                        En la actualidad es famoso por doblar algunos personajes como a Harry Osborn en Ultimate Spider-Man, a Eli shane en Bajoterra a Gambo Jumbo en Pecezuelos y Nathan Drake en la saga de juegos de Uncharted.
-                        Su tesitura de voz es capaz de abarcar personajes desde jóvenes hasta adultos maduros respectivamente.
-                        Además fue la voz institucional de Disney Channel en el feed argentino desde (al menos) octubre de 2005 hasta junio de 2017.
-                        Sus inicios fueron en la escuela de Palmera Record, donde tuvo como maestro a Ezequiel Romero.</p>
+                <div class="contenedorLocutor__card">
+                    <h2>Leto Dugatkin</h2>
+                    <img class="contenedorLocutor__card__imagen" src="./imagenes/Leto_Dugatkin.jpg" alt="Locutor/Doblajista: Leto Dugatkin">
+                    <p class="contenedorLocutor__caja__parrafo">Leandro "Leto" Dugatkin es un actor de doblaje, locutor y periodista argentino.</p>
+                    <!-- Button trigger modal -->
+                    <div id="botonModalInformacion">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLeto">
+                            Más Información
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalLeto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Descripción general</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    En la actualidad es famoso por doblar algunos personajes como a Harry Osborn en Ultimate Spider-Man, a Eli shane en Bajoterra a Gambo Jumbo en Pecezuelos y Nathan Drake en la saga de juegos de Uncharted.
+                                    Su tesitura de voz es capaz de abarcar personajes desde jóvenes hasta adultos maduros respectivamente.
+                                    Además fue la voz institucional de Disney Channel en el feed argentino desde (al menos) octubre de 2005 hasta junio de 2017.
+                                    Sus inicios fueron en la escuela de Palmera Record, donde tuvo como maestro a Ezequiel Romero.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contenedorLocutor__caja">
-                    <img src="imagenes/Adrian_Wowczuk.jpg" alt="Locutor/Doblajista: Adrián Wowczuk" class="contenedorLocutor__caja__imagen">
-                    <h2 class="contenedorLocutor__caja__subtitulo">Adrián Wowczuk</h2>
-                    <p class="contenedorLocutor__caja__parrafo">Adrián Wowczuk es un locutor, director, productor, periodista y actor de doblaje argentino.
-                        Especialmente conocido por ser la voz de personajes como Daryl Dixon en la exitosa serie The Walking Dead, Luis en Operación rescate,
-                        Joel en el videojuego The Last of Us y por ser la voz actual de Tony Stark / Iron Man en los proyectos animados de Marvel igual que Doan Buu de Flipline studios de los juegos de papa's, entre muchos otros.
-                        Actualmente es de las voces más conocidas de Argentina.</p>
+
+                <div class="contenedorLocutor__card">
+                    <h2>Adrián Wowczuk</h2>
+                    <img class="contenedorLocutor__card__imagen" src="./imagenes/Adrian_Wowczuk.jpg" alt="Locutor/Doblajista: Adrian_Wowczuk">
+                    <p class="contenedorLocutor__caja__parrafo">Adrián Wowczuk es un locutor, director, productor, periodista y actor de doblaje argentino.</p>
+                    <!-- Button trigger modal -->
+                    <div id="botonModalInformacion">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAdrian">
+                            Más Información
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalAdrian" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Descripción general</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Especialmente conocido por ser la voz de personajes como Daryl Dixon en la exitosa serie The Walking Dead, Luis en Operación rescate,
+                                    Joel en el videojuego The Last of Us y por ser la voz actual de Tony Stark / Iron Man en los proyectos animados de Marvel igual que Doan Buu de Flipline studios de los juegos de papa's, entre muchos otros.
+                                    Actualmente es de las voces más conocidas de Argentina.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contenedorLocutor__caja">
-                    <img src="imagenes/Ale_Graue.jpg" alt="Locutor/Doblajista: Alejandro Graue" class="contenedorLocutor__caja__imagen">
-                    <h2 class="contenedorLocutor__caja__subtitulo">Alejandro Graue</h2>
-                    <p class="contenedorLocutor__caja__parrafo">Alejandro Graue es un actor de doblaje y locutor argentino. Es conocido por doblar a Schuyler Tate en la serie Power Rangers S.P.D. y alcanzó la fama internacional tras hacer la voz de Dipper Pines en Gravity Falls y todos los doblajes de Ross Lynch en Disney Channel.
-                        También es actor de teatro y comedia musical.</p>
+
+                <div class="contenedorLocutor__card">
+                    <h2>Alejandro Graue</h2>
+                    <img class="contenedorLocutor__card__imagen" src="./imagenes/Ale_Graue.jpg" alt="Locutor/Doblajista: Leto Dugatkin">
+                    <p class="contenedorLocutor__caja__parrafo">Alejandro Graue es un actor de doblaje y locutor argentino.</p>
+                    <!-- Button trigger modal -->
+                    <div id="botonModalInformacion">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlejandro">
+                            Más Información
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalAlejandro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Descripción general</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Es conocido por doblar a Schuyler Tate en la serie Power Rangers S.P.D. y alcanzó la fama internacional tras hacer la voz de Dipper Pines en Gravity Falls y todos los doblajes de Ross Lynch en Disney Channel.
+                                    También es actor de teatro y comedia musical.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <h1><u class="tituloSeccion">Trabajos Realizados</u></h1>
 
+
+
             <div class="contenedorProyecto">
-                <div class="contenedorProyecto__caja">
-                    <img src="imagenes/uncharted-portada-750x405.jpg" alt="Uncharted (Saga) portada" class="contenedorProyecto__caja__imagen">
-                    <h3 class="contenedorProyecto__caja__subtitulo">Uncharted (Saga)</h3>
-                    <p class="contenedorProyecto__caja__parrafo"><i>El doblaje en español latino de la saga de videojuegos de Uncharted empezó en 2011 con el 3er Juego: Uncharted 3 Drake's Deception. Posteriormente se dobló el 1er y 2do juego en Uncharted Nathan Drake's Collection, finalizando con la saga en Uncharted 4: Thief's End y Uncharted The Lost Legacy</i></p>
+                <div class="contenedorProyecto__card">
+                    <h2>Uncharted (Saga)</h2>
+                    <img class="contenedorProyecto__card__imagen" src="./imagenes/uncharted-portada-750x405.jpg" alt="Uncharted (Saga) portada">
+                    <p class="contenedorProyecto__card__parrafo">El doblaje en español latino de la saga de videojuegos de Uncharted empezó en 2011 con el 3er Juego: Uncharted 3 Drake's Deception.</p>
+                    <!-- Button trigger modal -->
+                    <div id="botonModalInformacion">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalUncharted">
+                            Más Información
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalUncharted" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Descripción</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Posteriormente se dobló el 1er y 2do juego en Uncharted Nathan Drake's Collection, finalizando con la saga en Uncharted 4: Thief's End y Uncharted The Lost Legacy
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contenedorProyecto__caja">   
-                    <img src="imagenes/The_Walking_Dead.jpg" alt="The Walking Dead" class="imagenProyecto contenedorProyecto__caja__imagen">
-                    <h3 class="contenedorProyecto__caja__subtitulo">The Walking Dead</h3>
-                    <p class="contenedorProyecto__caja__parrafo"><i>Todas las Temporadas se doblaron en Argentina primero en el estudio Civisa Media la 1er y 2da Temporada y desde la 5ta temporada en adelante; y en Magma Productora la 3er y 4ta temporada</i></p>
+
+                <div class="contenedorProyecto__card">
+                    <h2>The Walking Dead</h2>
+                    <img class="contenedorProyecto__card__imagen" src="./imagenes/The_Walking_Dead.jpg" alt="The Walking Dead">
+                    <p class="contenedorProyecto__card__parrafo">Todas las Temporadas se doblaron en Argentina primero en el estudio Civisa Media la 1er y 2da Temporada y desde la 5ta temporada en adelante</p>
+                    <!-- Button trigger modal -->
+                    <div id="botonModalInformacion">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalWalkingDead">
+                            Más Información
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalWalkingDead" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Descripción</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Todas las Temporadas se doblaron en Argentina primero en el estudio Civisa Media la 1er y 2da Temporada y desde la 5ta temporada en adelante; y en Magma Productora la 3er y 4ta temporada
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contenedorProyecto__caja">
-                    <img src="imagenes/Mani_king.png" alt="Maní King (Publicidad)" class="contenedorProyecto__caja__imagen">
-                    <h3 class="contenedorProyecto__caja__subtitulo">Maní King (Publicidad)</h3>
-                    <p class="contenedorProyecto__caja__parrafo"><i>Muchas publicidades en TV y YouTube. Porque MANÍ KING es mucho más que un maní. Es un sabor especial que está presente en todos nuestros productos para que puedas disfrutar con amigos, en familia, en una fiesta, entre comidas, como snack nutritivo para los chicos o si estás practicando deportes.</i></p>
+
+                <div class="contenedorProyecto__card">
+                    <h2>Maní King (Publicidad)</h2>
+                    <img class="contenedorProyecto__card__imagen" src="./imagenes/Mani_king.png" alt="Maní King (Publicidad)">
+                    <p class="contenedorProyecto__card__parrafo">Muchas publicidades en TV y YouTube. Porque MANÍ KING es mucho más que un maní. Es un sabor especial que está presente en todos nuestros productos para que puedas disfrutar con amigos, en familia, en una fiesta, entre comidas, como snack nutritivo.</p>
                 </div>
-                <div class="contenedorProyecto__caja">
-                    <img src="imagenes/Dark_Serie_de_TV-111203947-large.jpg" alt="Dark (Serie)" class="contenedorProyecto__caja__imagen">
-                    <h3 class="contenedorProyecto__caja__subtitulo">Dark</h3>
-                    <p class="contenedorProyecto__caja__parrafo"><i>Esta serie original de Netflix, su doblaje al español latino se realizó en Argentina en el estudio Gapsa en sus 3 Temporadas.</i></p>
+
+                <div class="contenedorProyecto__card">
+                    <h2>Dark</h2>
+                    <img class="contenedorProyecto__card__imagen" src="./imagenes/Dark_Serie_de_TV-111203947-large.jpg" alt="Dark (Serie)">
+                    <p class="contenedorProyecto__card__parrafo">Esta serie original de Netflix su doblaje al español latino se realizó en Argentina en el estudio Gapsa en sus 3 Temporadas.</p>
+                    <!-- Button trigger modal -->
+                    <div id="botonModalInformacion">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDark">
+                            Más Información
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalDark" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Descripción</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    su doblaje al español latino se realizó en Argentina en el estudio Gapsa en sus 3 Temporadas.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
         </main><hr>
     <!----------------------------------------------------FOOTER----------------------------------------------------->
         <footer class="footer">

@@ -178,81 +178,87 @@
     100% {opacity: 1;}
 }
 
-.contenedorLocutor{
-    margin: 2rem 1rem 3rem 1rem;
-    padding: 1rem;
-    background: linear-gradient(to right, rgb(46, 46, 46), rgb(68, 68, 68));
-    display: inline-block; /*Este display es para rellenar el color del background*/
+.contenedorCards{
+    margin: 0 auto;
+}
 
-    &__caja{
-        display: table-cell;
+.card{
+    font-size: 1.5rem;
+    align-items: center;
+    max-width: 24rem;
+    display: inline-flex;
+    margin: 1rem;
+}
+
+.contenedorLocutor{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+
+    &__card{
+        width: 22rem;
+        height: 35rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 1.25rem;
+        text-align: center;
+        background: linear-gradient(to right, rgb(46, 46, 46), rgb(68, 68, 68));
+        color: $colorAzure;
+        font-size: 1.25rem;
+        padding: 1rem;
 
         &__imagen{
-            @include alto_y_ancho(18rem, 15rem);
-            display: block;
-            margin: auto;
-        }
-        &__imagen:hover{
-            @include alto_y_ancho(20rem, 17rem);
-        }
-        &__subtitulo{
-            color: $colorFirebrick;
-            font-weight: bolder;
-            font-size: 1.8rem;
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.6rem;
-            display:flex;
-            justify-content: center;
-            padding: 2rem 1rem 2rem 1rem;
+            margin: 1rem 0;
+            width: 18rem;
+            height: 16rem;
         }
         &__parrafo{
-            padding: 0.75rem 0.5rem;
-            color: $colorAzure;
-            font-size: 1.5rem;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            line-height: normal;
+            font-size: 1rem;
+            font-weight: 300;
             text-align: justify;
         }
     }
 }
 
 .contenedorProyecto{
-    margin: 2rem 1rem 3rem 1rem;
-    padding: 1rem;
-    background: linear-gradient(to right, rgb(46, 46, 46), rgb(68, 68, 68));
-    display: inline-block; /*Este display es para rellenar el color del background*/
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
 
-    &__caja{
-        display: table-cell;
+    &__card{
+        width: 17rem;
+        height: 42rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 1.25rem;
+        text-align: center;
+        background: linear-gradient(to right, rgb(46, 46, 46), rgb(68, 68, 68));
+        color: $colorAzure;
+        font-size: 1.5rem;
+        padding: 1rem;
 
         &__imagen{
-            @include alto_y_ancho(14rem, 12rem);
-            display: block;
-            margin: auto;
-            transition: height 2s, width 2s;
-        }
-        &__imagen:hover{
-            @include alto_y_ancho(16rem, 14rem);
-        }
-        &__subtitulo{
-            padding: 0.5rem 0;
-            color: $colorSteelblue;
-            font-weight: bold;
-            font-size: 1.5rem;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            line-height: 1.6rem;
-            display: flex;
-            justify-content: center;
+            margin: 1rem 0;
+            width: 14rem;
+            height: 12rem;
         }
         &__parrafo{
-            padding: 0.75rem 0.5rem;
-            color: $colorAliceBlue;
-            font-size: 1.5rem;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            line-height: normal;
+            font-size: 1.25rem;
+            font-weight: 300;
             text-align: justify;
         }
     }
+}
+
+.modal-content{
+    color: $colorAzure;
+    background: rgb(42, 48, 54);
 }
 
 @media (max-width: 576px){
