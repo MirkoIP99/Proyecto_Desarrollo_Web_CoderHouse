@@ -60,31 +60,53 @@
             <h1 id="tituloConsulta"><b>Consultanos los cursos que podemos ofrecerte</b></h1>
             <p id="subtituloConsulta"><i>Dejanos tus dudas y datos</i></p>
         </div>
-        <div class="formularioContacto">
-            <form method="GET">
-                <fieldset class="contenedorConsultas">
-                    <legend id="legendFormulario">Información de Contacto</legend>
-    
-                    <label class="labels" for="nombre">Nombre:</label>
-                    <input type="text" name="nombre" id="inputNombre" placeholder="Escriba su nombre" required>
-    
-                    <label class="labels" for="apellido">Apellido:</label>
-                    <input type="text" name="apellido" id="inputApellido" placeholder="Escriba su apellido" required>
-    
-                    <label class="labels" for="email">e-Mail:</label>
-                    <input type="email" name="email" id="inputEmail" placeholder="Escriba su e-mail" required>
-    
-                    <label class="labels" for="consulta"><b>Escribinos tu consulta</b></label>
-    
-                    <textarea name="consulta_stock" id="consultaStock" cols="30" rows="10"></textarea>
-    
-                    <label class="labels" for="checking">Acepta los términos: </label>
-                    <input type="checkbox" name="checking" id="checking" value="1">
-    
-                    <span><input type="reset" id="resetTexto" value="Limpiar texto">
-                    <input type="submit" id="submitEnviar" value="Enviar"></span>
-                </fieldset>
-            </form>
+
+
+
+        <div class="contenidoContacto">
+            <h1 class="contenidoContacto__h1">Contactate con Nosotros</h1>
+
+            <div class="contenidoContacto__envoltura">
+                <div class="contenidoContacto__envoltura__formulario">
+                    <h3>Contáctenos</h3>
+                    <form>
+                        <p>
+                            <label for="nombreCompleto">Nombre Completo</label>
+                            <input type="text" name="nombreCompleto" id="fullname">
+                        </p>
+                        <p>
+                            <label>E-Mail</label>
+                            <input type="email" name="email">
+                        </p>
+                        <p>
+                            <label>Teléfono</label>
+                            <input type="tel" name="telefono">
+                        </p>
+                        <p>
+                            <label>Asunto</label>
+                            <input type="text" name="asunto">
+                        </p>
+                        <p class="bloque">
+                            <label>Mensaje</label>
+                            <textarea name="mensaje" rows="3"></textarea>
+                        </p>
+                        <p class="bloque">
+                            <button type="submit">Enviar</button>
+                        </p>
+                    </form>
+                </div>
+
+                <div class="contenidoContacto__envoltura__info">
+                    <h4>Más Información</h4>
+                    <ul>
+                        <li><i class="far fa-map-marker-alt"></i>Buenos Aires, Argentina</li>
+                        <li><i class="far fa-phone"></i>11-5806-9634</li>
+                        <li><i class="far fa-envelope-open-text"></i>contact@argenlocucion.com</li>
+                    </ul>
+                    <p>Consultanos acerca de nuestros docentes, estudiantes, egresados, cursos o modalidades y te responderemos a la brevedad en el plazo establecido</p>
+                    <p>argenlocucion.com</p>
+                </div>
+            </div>
         </div>
     </main><hr>
     <!----------------------------------------------------FOOTER----------------------------------------------------->
@@ -125,5 +147,6 @@
         <p id="copyRight">CopyRight 2021 - Todos los derechos reservados</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7037dbb134.js" crossorigin="anonymous"></script>
 </body>
 </html>
