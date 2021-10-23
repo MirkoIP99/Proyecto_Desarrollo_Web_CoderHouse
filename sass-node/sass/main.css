@@ -46,11 +46,13 @@ body {
 }
 
 .submitBusqueda {
-  background: teal;
   display: inline-block;
-  border: 0.25rem solid teal;
+  background: #b70e21;
+  border: 0;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  color: white;
   border-radius: 0.5rem;
-  color: aliceblue;
 }
 
 @media (max-width: 576px) {
@@ -277,6 +279,19 @@ body {
   text-align: justify;
 }
 
+.botonModal {
+  background: #b70e21;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+.botonModal:hover {
+  background: #d63031;
+  color: white;
+  transition: background-color 1s ease-out;
+}
+
 .modal-content {
   color: azure;
   background: #2a3036;
@@ -350,7 +365,6 @@ body {
   box-sizing: border-box;
   background: #181818;
   color: white;
-  margin: 1rem;
   padding: 1rem;
 }
 .contenidoContacto__h1 {
@@ -389,6 +403,7 @@ body {
   border: 0;
   text-transform: uppercase;
   padding: 1em;
+  border-radius: 0.5rem;
 }
 .contenidoContacto__envoltura__formulario form button:hover {
   background: #d63031;
@@ -764,83 +779,88 @@ body {
   }
 }
 /*================Aplicando SASS en las secciones del archivo egresados.html========================*/
-.gridEgresados {
-  display: grid;
-  grid-template-areas: "header" "main" "footer";
-  grid-template-rows: auto auto 1fr;
-  grid-template-columns: 1fr;
-  align-items: stretch;
-  width: auto;
+.seccion {
+  position: relative;
+  width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
-.seccionesEgresados {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 1.25rem;
-  background-color: #252525;
-  height: 100%;
+.seccion .capa {
+  width: 0%;
+  height: 50vh;
+  background-color: rgba(36, 32, 32, 0.8);
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  transition: 0.4s all;
+}
+
+.seccion:hover .capa {
+  height: 100vh;
+  width: 100%;
   color: aliceblue;
 }
-.seccionesEgresados__titulo {
-  font-size: 3rem;
-  color: gold;
-  margin: 2rem 1rem 2rem 1rem;
-  -webkit-animation-name: animacionTituloEgresados;
-          animation-name: animacionTituloEgresados;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+
+.seccion:hover .capa h3 {
+  text-align: center;
+  padding: 5rem;
+  font-size: 4rem;
 }
-@-webkit-keyframes animacionTituloEgresados {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes animacionTituloEgresados {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.seccionesEgresados__parrafo-1 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+.seccion:hover .capa p {
+  text-align: center;
+  padding: 2rem;
   font-size: 1.5rem;
-  line-height: 1.75rem;
-  text-align: justify;
-  padding-bottom: 1rem;
 }
-.seccionesEgresados__parrafo-2 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  text-align: justify;
-  padding-bottom: 1rem;
-}
-.seccionesEgresados__lista {
+
+.seccion:hover .capa ul {
   list-style: decimal-leading-zero;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding: 1rem 1rem 1rem 5rem;
+}
+
+.seccion1 {
+  background: url(../../imagenes/control-room.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.seccion2 {
+  background: url(../../imagenes/control-room-2.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.seccion3 {
+  background: url(../../imagenes/control-room-3.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 576px) {
-  .seccionesEgresados__parrafo-1 {
-    font-size: 1.35rem;
+  .seccion:hover .capa h3 {
+    padding: 1.25rem;
+    font-size: 1.75rem;
   }
 
-  .seccionesEgresados__parrafo-2 {
-    font-size: 1.35rem;
+  .seccion:hover .capa p {
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .seccion:hover .capa ul {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    padding: 1rem 1rem 1rem 3rem;
   }
 }
 /*==================Aplicando SASS en las secciones del archivo empresas.html========================*/
