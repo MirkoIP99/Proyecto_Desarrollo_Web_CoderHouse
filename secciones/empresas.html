@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="../sass-node/sass/main.css">
 </head>
 <body>
-    <div class="gridEmpresas">
         <!--------------------------------------------------HEADER------------------------------------------------------>
         <header>
             <div class="divIconos">
@@ -59,58 +58,135 @@
         <main>
             
             <h1 class="tituloPrincipalEmpresas">¿Dónde trabajan nuestros alumnos?</h1>
-            <div class="empresa">
-                <div class="empresa__division">
-                    <img class="imagenEmpresa empresa__division__imagen" src="../imagenes/radio-disney.png" alt="radioDisney"></td>
-                    <p class="empresa__division__descripcion">Radio Disney es una emisora radial argentina de frecuencia modulada licenciada en la ciudad de Buenos Aires y transmitiendo en el Área Metropolitana de Buenos Aires. Pertenece a Difusora Baires S.A. y está afiliada a la cadena Radio Disney Latinoamérica.</p>
+
+            <section class="dark">
+                <div class="container py-4">
+                    <h1 class="h1 text-center" id="pageHeaderTitle"></h1>
+            
+                    <article class="postcard dark blue">
+                        <a class="postcard__img_link" href="#">
+                            <img class="postcard__img" src="../imagenes/radio-disney.png" alt="Image Title" />
+                        </a>
+                        <div class="postcard__text">
+                            <h1 class="postcard__title blue"><a href="#">Radio Disney</a></h1>
+                            <div class="postcard__subtitle small">
+                                <time datetime="2020-05-25 12:00:00">
+                                    <i class="fas fa-calendar-alt mr-2"></i>Octubre, 2021
+                                </time>
+                            </div>
+                            <div class="postcard__bar"></div>
+                            <div class="postcard__preview-txt">Radio Disney es una emisora radial argentina de frecuencia modulada licenciada en la ciudad de Buenos Aires y transmitiendo en el Área Metropolitana de Buenos Aires. Pertenece a Difusora Baires S.A. y está afiliada a la cadena Radio Disney Latinoamérica.</div>
+                            <ul class="postcard__tagbox">
+                                <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                <li class="tag__item play blue">
+                                    <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="postcard dark red">
+                        <a class="postcard__img_link" href="#">
+                            <img class="postcard__img" src="../imagenes/fm-aspen-1023.png" alt="Image Title" />	
+                        </a>
+                        <div class="postcard__text">
+                            <h1 class="postcard__title red"><a href="#">Radio Aspen</a></h1>
+                            <div class="postcard__subtitle small">
+                                <time datetime="2020-05-25 12:00:00">
+                                    <i class="fas fa-calendar-alt mr-2"></i>Octubre, 2021
+                                </time>
+                            </div>
+                            <div class="postcard__bar"></div>
+                            <div class="postcard__preview-txt">Radio Aspen, es una estación de radio argentina que transmite desde la Ciudad Autónoma de Buenos Aires.​Se ubica en el 2.° puesto de las radios FM más escuchadas de Argentina. Desde el 19 de febrero de 2020 se encuentra disponible a través del dial 35.3 de la Televisión Digital Terrestre (TDA) para el ámbito del AMBA.
+                                El 20 de noviembre de 2020, se conoció que el Grupo Octubre adquirió por completo la emisora, junto con elnueve.</div>
+                            <ul class="postcard__tagbox">
+                                <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                <li class="tag__item play red">
+                                    <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="postcard dark green">
+                        <a class="postcard__img_link" href="#">
+                            <img class="postcard__img" src="../imagenes/fm-pop-1015.png" alt="Image Title" />
+                        </a>
+                        <div class="postcard__text">
+                            <h1 class="postcard__title green"><a href="#">Pop Radio 101.5</a></h1>
+                            <div class="postcard__subtitle small">
+                                <time datetime="2020-05-25 12:00:00">
+                                    <i class="fas fa-calendar-alt mr-2"></i>Octubre, 2021
+                                </time>
+                            </div>
+                            <div class="postcard__bar"></div>
+                            <div class="postcard__preview-txt">Pop Radio 101.5 o La Pop es una estación de radio argentina que transmite desde la Ciudad Autónoma de Buenos Aires. Comenzó a transmitir bajo la licencia que pertenecía a Gen 101.5 (antes Cadena Top 40 y FM San Isidro Labrador), propiedad de Red Celeste y Blanca S.A. (luego DHCom S.A.) y operada por el Grupo Clarín.
+                                En abril de 2012, fue adquirida por su actual propietario, el Grupo Indalo de Cristóbal López.</div>
+                            <ul class="postcard__tagbox">
+                                <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                <li class="tag__item play green">
+                                    <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="postcard dark yellow">
+                        <a class="postcard__img_link" href="#">
+                            <img class="postcard__img" src="../imagenes/urbana-play.png" alt="Image Title" />
+                        </a>
+                        <div class="postcard__text">
+                            <h1 class="postcard__title yellow"><a href="#">Urbana Play FM</a></h1>
+                            <div class="postcard__subtitle small">
+                                <time datetime="2020-05-25 12:00:00">
+                                    <i class="fas fa-calendar-alt mr-2"></i>Octubre, 2021
+                                </time>
+                            </div>
+                            <div class="postcard__bar"></div>
+                            <div class="postcard__preview-txt">Urbana Play FM es una emisora de radio argentina que desde el 27 de enero de 2020 hasta el 24 de enero de 2021, retransmitió la programación principal de Radio Continental AM 590. Fue fundada el 3 de marzo de 2008 como parte de una iniciativa de "Nostalgie Amsud", empresa licenciataria de Aspen 102.3.</div>
+                            <ul class="postcard__tagbox">
+                                <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                                <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                                <li class="tag__item play yellow">
+                                    <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
-                <div class="empresa__division">    
-                    <p class="empresa__division__descripcion">Radio Aspen, es una estación de radio argentina que transmite desde la Ciudad Autónoma de Buenos Aires.​Se ubica en el 2.° puesto de las radios FM más escuchadas de Argentina. Desde el 19 de febrero de 2020 se encuentra disponible a través del dial 35.3 de la Televisión Digital Terrestre (TDA) para el ámbito del AMBA.
-                        El 20 de noviembre de 2020, se conoció que el Grupo Octubre adquirió por completo la emisora, junto con elnueve.</p>
-                    <img class="empresa__division__imagen" src="../imagenes/fm-aspen-1023.png" alt="radioAspen">
-                </div>
-                <div class="empresa__division">
-                    <img class="empresa__division__imagen" src="../imagenes/fm-pop-1015.png" alt="radioPop">
-                    <p class="empresa__division__descripcion">Pop Radio 101.5 o La Pop es una estación de radio argentina que transmite desde la Ciudad Autónoma de Buenos Aires. Comenzó a transmitir bajo la licencia que pertenecía a Gen 101.5 (antes Cadena Top 40 y FM San Isidro Labrador), propiedad de Red Celeste y Blanca S.A. (luego DHCom S.A.) y operada por el Grupo Clarín.
-                        En abril de 2012, fue adquirida por su actual propietario, el Grupo Indalo de Cristóbal López.</p>
-                </div>
-                <div class="empresa__division">
-                    <p class="empresa__division__descripcion">Urbana Play FM es una emisora de radio argentina que desde el 27 de enero de 2020 hasta el 24 de enero de 2021, retransmitió la programación principal de Radio Continental AM 590. Fue fundada el 3 de marzo de 2008 como parte de una iniciativa de "Nostalgie Amsud", empresa licenciataria de Aspen 102.3.</p></td>
-                    <img class="empresa__division__imagen" src="../imagenes/urbana-play.png" alt="radioUrbana">
-                </div>
-            </div><hr>
+            </section><hr>
         </main>
         <!----------------------------------------------------FOOTER----------------------------------------------------->
         <footer class="footer">
-            <table class="tablaFooter footer__tabla">
+            <table class="footer__tabla">
                 <tr>
-                    <th class="seccionTablaFooter footer__tabla__seccion">Categorías</th>
-                    <th class="seccionTablaFooter footer__tabla__seccion">Contactanos</th>
-                    <th class="seccionTablaFooter footer__tabla__seccion">Sigamos Conectados</th>
+                    <th class="footer__tabla__seccion">Categorías</th>
+                    <th class="footer__tabla__seccion">Contactanos</th>
+                    <th class="footer__tabla__seccion">Sigamos Conectados</th>
                 </tr>
                 <tr>
-                    <th class="seccionTablaFooter footer__tabla__seccion">
+                    <th class="footer__tabla__seccion">
                         <ul>
-                            <li><a href="../secciones/contacto.html">Contactanos</a></li>
-                            <li><a href="../secciones/profesionales.html">Profesionales</a></li>
-                            <li><a href="../secciones/galería.html">Galería</a></li>
-                            <li><a href="../secciones/egresados.html">Egresados</a></li>
-                            <li><a href="../secciones/empresas.html">Empresas</a></li>
+                            <li><img src="https://img.icons8.com/fluency/48/000000/new-contact.png"/><a href="../secciones/contacto.html">Contactanos</a></li>
+                            <li><img src="https://img.icons8.com/fluency/48/000000/conference-call.png"/><a href="../secciones/profesionales.html">Profesionales</a></li>
+                            <li><img src="https://img.icons8.com/color/48/000000/gallery.png"/><a href="../secciones/galería.html">Galería</a></li>
+                            <li><img src="https://img.icons8.com/fluency/48/000000/student-male.png"/><a href="../secciones/egresados.html">Egresados</a></li>
+                            <li><img src="https://img.icons8.com/fluency/48/000000/client-company.png"/><a href="../secciones/empresas.html">Empresas</a></li>
                         </ul>
                     </th>
-                    <th class="seccionTablaFooter footer__tabla__seccion">
+                    <th class="footer__tabla__seccion">
                         <ul>
-                            <li>WhatsApp: (Ingresar número)</li>
-                            <li><a href="link">Mail: </a></li>
-                            <li><a href="link">Ubicación: </a></li>
+                            <li><img src="https://img.icons8.com/fluency/48/000000/whatsapp.png"/>WhatsApp: (Ingresar número)</li>
+                            <li><img src="https://img.icons8.com/fluency/48/000000/shared-mail.png"/><a href="link">Mail: </a></li>
+                            <li><img src="https://img.icons8.com/color/24/000000/marker--v1.png"/><a href="link">Ubicación: </a></li>
                         </ul>
                     </th>
-                    <th class="seccionTablaFooter footer__tabla__seccion">
+                    <th class="footer__tabla__seccion">
                         <ul>
-                            <li><a href="https://instagram.com">Instagram</a></li>
-                            <li><a href="https://youtube.com">YouTube</a></li>
-                            <li><a href="https://facebook.com">Facebook</a></li>
-                            <li><a href="https://twitter.com">Twitter</a></li>
+                            <li><img src="https://img.icons8.com/fluency/48/000000/instagram-new.png"/><a href="https://instagram.com">Instagram</a></li>
+                            <li><img src="https://img.icons8.com/color/48/000000/youtube-play.png"/><a href="https://youtube.com">YouTube</a></li>
+                            <li><img src="https://img.icons8.com/color/48/000000/facebook.png"/><a href="https://facebook.com">Facebook</a></li>
+                            <li><img src="https://img.icons8.com/fluency/48/000000/twitter.png"/><a href="https://twitter.com">Twitter</a></li>
                         </ul>
                     </th>
                 </tr>
