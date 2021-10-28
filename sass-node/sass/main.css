@@ -57,7 +57,7 @@ body {
 
 @media (max-width: 576px) {
   .divIconos__tabla__iconoContacto {
-    width: 5rem;
+    width: 4rem;
     height: 5rem;
   }
 
@@ -307,39 +307,25 @@ body {
     height: 25rem;
   }
 
-  .contenedorLocutor__caja {
-    /*Para que el texto se vea debajo de la imagen*/
-    display: block;
-  }
-  .contenedorLocutor__caja__imagen {
-    width: 18rem;
-    height: 20rem;
-  }
-  .contenedorLocutor__caja__imagen:hover {
-    width: 19rem;
-    height: 23rem;
-  }
-  .contenedorLocutor__caja__parrafo {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 1.35rem;
-    line-height: 1.7rem;
+  .tituloSeccion {
+    text-align: center;
+    line-height: 3rem;
   }
 
-  .contenedorProyecto__caja {
-    display: block;
+  .contenedorLocutor__card {
+    width: 24rem;
+    height: 35rem;
   }
-  .contenedorProyecto__caja__imagen {
-    width: 18rem;
-    height: 20rem;
+  .contenedorLocutor__card__imagen {
+    width: 15rem;
   }
-  .contenedorProyecto__caja__imagen:hover {
-    width: 19rem;
-    height: 23rem;
+
+  .contenedorProyecto__card {
+    width: 24rem;
+    height: 38rem;
   }
-  .contenedorProyecto__caja__parrafo {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 1.35rem;
-    line-height: 1.7rem;
+  .contenedorProyecto__card__imagen {
+    width: 15rem;
   }
 }
 @media (min-width: 576px) and (max-width: 960px) {
@@ -493,7 +479,9 @@ body {
 }
 
 .iFrameProfesionales {
-  padding: 1rem;
+  width: 35rem;
+  height: 20rem;
+  margin: 0.5rem 2rem;
 }
 
 .publicidadesPersonajes {
@@ -523,12 +511,18 @@ body {
     max-width: 100%;
   }
   .cajaProfesional__imagen {
-    width: 20rem;
+    width: 16rem;
     height: 18rem;
   }
   .cajaProfesional__imagen:hover {
-    width: 21rem;
+    width: 18rem;
     height: 20rem;
+  }
+
+  .iFrameProfesionales {
+    width: 17rem;
+    height: 12rem;
+    margin: 0.5rem 1.25rem;
   }
 
   #listasDeLeto {
@@ -1195,11 +1189,13 @@ a, a:hover {
 }
 
 @media (max-width: 576px) {
-  .footer {
-    font-size: 0.6rem;
+  .footer__tabla__subtitulo {
+    font-size: 0.55rem;
+    text-align: center;
   }
   .footer__tabla__seccion {
     text-align: center;
+    font-size: 0.5rem;
   }
   .footer__tabla__seccion ul li img {
     display: block;

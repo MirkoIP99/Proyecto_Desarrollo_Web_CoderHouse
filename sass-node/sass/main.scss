@@ -51,7 +51,7 @@
 
 @include movilHeader{
     .divIconos__tabla__iconoContacto{
-        @include alto_y_ancho(5rem, 5rem);
+        @include alto_y_ancho(4rem, 5rem);
     }
     .cajaBusqueda{
         display: map-get($map: $varsCajaBusqueda, $key: 'display');
@@ -284,34 +284,26 @@
             @include alto_y_ancho($width100, 25rem);
         }
     }
-    .contenedorLocutor__caja{ /*Para que el texto se vea debajo de la imagen*/
-        display: block;
+    .tituloSeccion {
+        text-align: center;
+        line-height: 3rem;
+    }
 
-        &__imagen{
-            @include alto_y_ancho(18rem, 20rem);
-        }
-        &__imagen:hover{
-            @include alto_y_ancho(19rem, 23rem);
-        }
-        &__parrafo{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 1.35rem;
-            line-height: 1.7rem;
+    .contenedorLocutor__card {
+        width: 24rem;
+        height: 35rem;
+
+        &__imagen {
+            width: 15rem;
         }
     }
-    .contenedorProyecto__caja{
-        display: block;
 
-        &__imagen{
-            @include alto_y_ancho(18rem, 20rem);
-        }
-        &__imagen:hover{
-            @include alto_y_ancho(19rem, 23rem);
-        }
-        &__parrafo{
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 1.35rem;
-            line-height: 1.7rem;
+    .contenedorProyecto__card {
+        width: 24rem;
+        height: 38rem;
+
+        &__imagen {
+            width: 15rem;
         }
     }
 }
@@ -484,7 +476,9 @@
 }
 
 .iFrameProfesionales{
-    padding: 1rem;
+    width: 35rem;
+    height: 20rem;
+    margin: 0.5rem 2rem;
 }
 
 .publicidadesPersonajes{
@@ -511,11 +505,16 @@
         max-width: 100%;
 
         &__imagen{
-            @include alto_y_ancho(20rem, 18rem);
+            @include alto_y_ancho(16rem, 18rem);
         }
         &__imagen:hover{
-            @include alto_y_ancho(21rem, 20rem);
+            @include alto_y_ancho(18rem, 20rem);
         }
+    }
+    .iFrameProfesionales {
+        width: 17rem;
+        height: 12rem;
+        margin: 0.5rem 1.25rem;
     }
     @each $locutor in Leto, Adrian {
         #listasDe#{$locutor}{
@@ -1170,10 +1169,14 @@ a, a:hover {
 
 @include movilFooter{
     .footer{
-        font-size: 0.6rem;
 
+        &__tabla__subtitulo {
+            font-size: 0.55rem;
+            text-align: center;
+        }
         &__tabla__seccion {
             text-align: center;
+            font-size: 0.5rem;
         }
         &__tabla__seccion ul li img{
             display: block;
