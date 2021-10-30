@@ -539,7 +539,7 @@
 
 #nombreSeccionImagenes{
     color: $colorGold;
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: normal;
     text-align: left;
     margin: 2rem 1rem 2rem 1rem;
@@ -564,8 +564,8 @@
         &__imagen{
             @include alto_y_ancho(18rem, 15rem);
             display: block;
-            margin: auto;
             transition: width 2s, height 2s;
+            margin: auto;
         }
         &__imagen:hover{
             @include alto_y_ancho(21rem, 18rem);
@@ -586,9 +586,59 @@
     }
 }
 
+
+.contenedorImagenesGaleria {
+    display: flex;
+    width: $width100;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 7px;
+
+    & .contenedorImagenesGaleria__imagen {
+        width: 30%;
+        position: relative;
+        height: 18rem;
+        box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+        margin: 1rem;
+    }
+
+    &__imagen img {
+        width: $width100;
+        height: $height100;
+    }
+    &__imagen__overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(66, 66, 66, 0.781);
+        width: $width100;
+        height: 0;
+        transition: 1s;
+        overflow: hidden;
+
+
+        & h2 {
+            color: $colorAliceBlue;
+            font-size: 2rem;
+            font-weight: 300;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__imagen:hover .contenedorImagenesGaleria__imagen__overlay{
+        height: $height100;
+        cursor: pointer;
+    }
+}
+
 #nombreSeccionAudios{
     color: $colorGold;
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: normal;
     text-align: left;
     margin: 2rem 1rem 2rem 1rem;
@@ -601,42 +651,44 @@
     100% {opacity: 1;}
 }
 
-.contenidoAudios{
-    margin: 2rem 1rem 3rem 1rem;
-    padding: 1rem;
+.contenedorAudios {
     background: linear-gradient(to right, rgb(36, 36, 36), rgb(0, 0, 95));
-    display: inline-block; /*Este display es para rellenar el color del background*/
+    margin: 1rem auto;
+    padding: 1.25rem;
+    width: 95%;
 
-    &__caja{
-        display: table-cell;
-        padding: 1.5rem;
+    &__contenido {
+        display: inline-block;
+        width: 32%;
+        height: 22rem;
 
-        &__personaje{
-            color: rgb(227, 255, 240);
+        &__titulo {
+            color: $colorAliceBlue;
             text-align: center;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 1rem;
-            padding: 1rem 0.5rem 1rem 0.5rem;
         }
-        &__audio{
-            display: block;
-            margin: auto;
+        &__imagen {
+            width: $width100;
+            height: $height100;
+            object-fit: cover;
+            padding: 1rem;
+        }
+        &__audio {
+            width: $width100;
+            padding: 0 0.5rem;
             animation: jackInTheBox;
-            animation-duration: 2s;
+            animation-duration: 5s;
         }
-        &__subtitulo{
-            color: $colorAzure;
+        &__descripcion {
+            color: $colorAliceBlue;
+            padding-top: 1rem;
             text-align: center;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-size: 1rem;
-            padding: 1rem 0 1rem 0;
         }
     }
 }
 
 #nombreSeccionVideos{
     color: $colorGold;
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: normal;
     text-align: left;
     margin: 2rem 1rem 2rem 1rem;
@@ -651,6 +703,9 @@
 
 .iFrameGaleria{
     padding: 1rem;
+    width: 35rem;
+    height: 20rem;
+    margin: 0.5rem 2rem;
 }
 
 @media (max-width: 576px){
@@ -661,20 +716,32 @@
         display: block;
     }
     .contenedorEstudio__caja__imagen{
-        @include alto_y_ancho(18rem, 12rem);
+        @include alto_y_ancho(85%, 12rem);
     }
     .contenedorEstudio__caja__imagen:hover{
-        @include alto_y_ancho(19rem, 15rem);
+        @include alto_y_ancho(95%, 15rem);
     }
-    .contenidoAudios{
+    .contenedorImagenesGaleria {
+        width: 95%;
+    }
+    .contenedorImagenesGaleria .contenedorImagenesGaleria__imagen {
+        width: 90%;
+    }
+    .contenedorAudios {
         display: block;
+        width: 90%;
+
+        &__contenido {
+            display: block !important;
+            width: $width100 !important;
+            height: $height100 !important;
+            margin: 1rem 0 !important;
+        }
     }
-    .contenidoAudios__caja{
-        display: block;
-    }
-    .contenidoAudios__caja__audio{
-        margin: 0;
-        width: 15rem;
+    .iFrameGaleria{
+        width: 95%;
+        height: 15rem;
+        margin: 0.5rem 0.5rem;
     }
 }
 
@@ -685,15 +752,22 @@
     .contenedorEstudio__caja{
         display: block;
     }
-    .contenidoAudios{
-        display: block;
+    .contenedorImagenesGaleria {
+        width: 85%;
     }
-    .contenidoAudios__caja{
-        display: block;
+    .contenedorImagenesGaleria .contenedorImagenesGaleria__imagen {
+        width: 40%;
     }
-    .contenidoAudios__caja__audio{
-        margin: 0;
-        width: 15rem;
+    .contenedorAudios {
+        display: block;
+        width: 90%;
+
+        &__contenido {
+            display: block !important;
+            width: $width100 !important;
+            height: $height100 !important;
+            margin: 1rem 0 !important;
+        }
     }
 }
 
@@ -703,10 +777,6 @@
     }
     .contenedorEstudio__caja{
         display: table-cell;
-    }
-    .contenidoAudios__caja__audio{
-        margin: 0;
-        width: 16rem;
     }
 }
 
