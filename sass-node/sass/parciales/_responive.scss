@@ -4,6 +4,12 @@
     }
 }
 
+@mixin tabletHeader {
+    @media (min-width: 576px) and (max-width: 960px){
+        @content;
+    }
+}
+
 @mixin movilNavBar {
     @media (max-width: 576px){
         @content;
@@ -17,7 +23,7 @@
 }
 
 @mixin netbookNavBar {
-    @media (min-width: 960px) and (max-width: 1024px){
+    @media (min-width: 960px) and (max-width: 1025px){
         @content;
     }
 }
