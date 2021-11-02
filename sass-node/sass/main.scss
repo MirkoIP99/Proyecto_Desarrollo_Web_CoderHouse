@@ -77,83 +77,50 @@
 
 /*===========================Aplicando SASS en el NavBar de los HTMls===============================*/
 
-.contenedorNavBar{
+.menu {
+    text-align: center;
+}
+
+.menuContenedor {
+    width: $width100;
+}
+
+.botonMenu {
     display: block;
+    float: left;
+    width: 90%;
+    margin: 1rem;
+}
 
-    &__collapse{ /*Modifico los items del Nav de Bootstrap*/
-        max-width: $width100;
-        justify-content: space-around;
+.menu ul {
+    list-style: none;
+    margin: 0 auto;
+}
 
-        &__seccionesWeb{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+.menu ul li {
+    display: inline-flex;
+    transition: all 0.5s ease;
 
-            &__subSeccionesWeb{
-                position: absolute;
-                background-color: $colorGrey;
-                padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-                display: none;
-                z-index: 20;
-            }
-            &__subSeccionesWeb li a{
-                font-size: 1rem;
-                display: block;
-                padding: 1rem;
-                font-size: 1.25rem;
-                text-decoration: none;
-                color: $colorWhiteSmoke;
-                text-align: center;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                transition: all 2s;
-            }
-        }
-        &__seccionesWeb li:hover .subSeccionesWeb{ /*Para poder desplegar el submenú*/
-            display: block;
-            font-size: 1.5rem;
-        }
-        &__seccionesWeb > li > a{
-            text-decoration: none;
-            color: $colorWhite;
-            width: $width100;
-            text-align: center;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 1.75rem;
-            padding: 0 1.5rem;
-            transition: all 2s;
-        }
-        &__seccionesWeb li a:hover{
-            color: rgb(1, 1, 158);    /*Estilo al poner el cursor sobre c/u de las cajas del menú*/
-            font-size: 2rem;
-        }
+    & a {
+        color: $colorAliceBlue;
+        font-size: 2rem;
+        padding: 1rem;
     }
 }
 
-@include movilNavBar{
-    .seccionesWeb{ /*Para el despliegue del menú en formato de columna*/
-        flex-direction: column;
-        align-items: center;
-    }
-    .subSeccionesWeb{ /*Para que el despliegue del submenú no tape a los otros items principales*/
-        position: relative;
-    }
+.menu ul li:hover {
+    background-color: #d63031;
 }
-@include tabletNavBar{
-    .seccionesWeb{
-        flex-direction: column;
-        align-items: center;
+
+@include movilNavBar {
+    .menu ul {
+        width: auto;
     }
-    .subSeccionesWeb{
-        position: relative;
-    }
-}
-@include netbookNavBar{
-    .seccionesWeb{
-        flex-direction: row;
-        align-items: center;
-    }
-    .subSeccionesWeb{
-        position: absolute;
+    .menu ul li {
+        display: inline-block;
+        text-align: left;
+        width: 90%;
+        padding: 1rem 0;
     }
 }
 

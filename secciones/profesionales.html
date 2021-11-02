@@ -29,30 +29,36 @@
             <input type="text" class="cajaBusqueda">
             <input type="submit" value="Buscar" class="submitBusqueda">
         </span>
-        <div class="contenedorNavBar">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse contenedorNavBar__collapse" id="navbarNavDropdown">
-                        <ul class="seccionesWeb contenedorNavBar__collapse__seccionesWeb">
-                            <li><a href="../secciones/contacto.html">Contactanos</a></li>
-                            <li><a href="../secciones/profesionales.html">Profesionales</a></li>
-                            <li><a href="../secciones/galería.html">Galería</a>
-                                <ul class="subSeccionesWeb contenedorNavBar__collapse__seccionesWeb__subSeccionesWeb">
-                                    <li><a href="../secciones/galería.html#nombreSeccionImagenes">Imagenes</a></li>
-                                    <li><a href="../secciones/galería.html#nombreSeccionAudios">Audios</a></li>
-                                    <li><a href="../secciones/galería.html#nombreSeccionVideos">Videos</a></li>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark menu">
+            <div class="menuContenedor bg-dark">
+                <button class="navbar-toggler botonMenu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul>
+                        <li><a href="../secciones/contacto.html">Contactanos</a></li>
+                        <li><a href="../secciones/profesionales.html">Profesionales</a></li>
+                        <li><div class="navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                              <li class="dropdown">
+                                <a class="dropdown-toggle" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Galería
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                                  <li><a href="../secciones/galería.html#nombreSeccionImagenes">Imagenes</a></li>
+                                  <li><a href="../secciones/galería.html#nombreSeccionAudios">Audios</a></li>
+                                  <li><a href="../secciones/galería.html#nombreSeccionVideos">Videos</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="../secciones/egresados.html">Egresados</a></li>
-                            <li><a href="../secciones/empresas.html">Empresas</a></li>
-                        </ul>
-                    </div>
+                              </li>
+                            </ul>
+                        </div></li>
+                        <li><a href="../secciones/egresados.html">Egresados</a></li>
+                        <li><a href="../secciones/empresas.html">Empresas</a></li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
     <!-----------------------------------------------------MAIN------------------------------------------------------>
     <main>
