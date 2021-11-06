@@ -113,11 +113,8 @@
 }
 
 @include movilNavBar {
-    .menu ul {
-        width: auto;
-    }
     .menu ul li {
-        display: inline-block;
+        display: block;
         text-align: left;
         width: 90%;
         padding: 1rem 0;
@@ -163,6 +160,11 @@
 .contenedorCards{
     margin: 0 auto;
 
+    &__card {
+        max-width: 30%;
+        display: inline-flex;
+        margin: 1rem;
+    }
     &__titulo {
         font-size: 2rem;
         width: $width100;
@@ -170,13 +172,6 @@
     &__parrafo {
         font-size: 1.2rem;
     }
-}
-
-.card{
-    align-items: center;
-    max-width: 24rem;
-    display: inline-flex;
-    margin: 1rem;
 }
 
 .contenedorLocutor{
@@ -216,11 +211,11 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     margin: auto;
 
     &__card{
-        width: 17rem;
+        width: 40%;
         height: 42rem;
         border-radius: 1rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -234,8 +229,8 @@
 
         &__imagen{
             margin: 1rem 0;
-            width: 14rem;
-            height: 12rem;
+            width: $width100;
+            height: 22rem;
         }
         &__parrafo{
             font-size: 1.25rem;
@@ -265,10 +260,17 @@
 
 @media (max-width: 576px){
     .carousel{
-        @include alto_y_ancho($width100, 25rem);
+        @include alto_y_ancho($width100, 32rem);
     
         &__imagenSlide{
-            @include alto_y_ancho($width100, 25rem);
+            @include alto_y_ancho($width100, 32rem);
+        }
+    }
+    .contenedorCards{
+        margin: 0 auto;
+    
+        &__card {
+            max-width: $width100;
         }
     }
     .tituloSeccion {
@@ -295,14 +297,12 @@
 }
 
 @media (min-width: 576px) and (max-width: 960px){
-    .contenedorCards {
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: auto;
-    }
-    .contenedorCards__card {
-        display: flexbox;
-        width: 45%;
+    .contenedorCards{
+        margin: 0 auto;
+    
+        &__card {
+            max-width: 42%;
+        }
     }
     .contenedorLocutor__card {
         width: 43%;
@@ -330,15 +330,12 @@
 }
 
 @media (min-width: 960px) and (max-width: 1025px){
-    .contenedorCards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: auto;
-    }
-    .contenedorCards__card {
-        display: flex;
-        width: 50%;
+    .contenedorCards{
+        margin: 0 auto;
+    
+        &__card {
+            max-width: 45%;
+        }
     }
     .contenedorProyecto {
         display: flex;
@@ -448,6 +445,9 @@
             font-size: 1rem;
         }
     }
+    #imagenHomero {
+        width: 15rem;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 960px){
@@ -520,7 +520,7 @@
 }
 
 .iFrameProfesionales{
-    width: 35rem;
+    width: 42%;
     height: 20rem;
     margin: 0.5rem 2rem;
 }
@@ -583,7 +583,7 @@
         }
     }
     .iFrameProfesionales {
-        width: 19rem;
+        width: 42%;
         height: 15rem;
         margin: 0.5rem 2rem;
     }
@@ -768,7 +768,7 @@
 
 .iFrameGaleria{
     padding: 1rem;
-    width: 35rem;
+    width: 42%;
     height: 20rem;
     margin: 0.5rem 2rem;
 }
@@ -816,6 +816,13 @@
     }
     .contenedorEstudio__caja{
         display: block;
+
+        &__imagen{
+            @include alto_y_ancho(50%, 17rem);
+        }
+        &__imagen:hover{
+            @include alto_y_ancho(70%, 20rem);
+        }
     }
     .contenedorImagenesGaleria {
         width: 85%;
@@ -832,11 +839,35 @@
             width: $width100 !important;
             height: $height100 !important;
             margin: 1rem 0 !important;
+
+            &__imagen {
+                width: $width100;
+                height: 38rem;
+            }
         }
+    }
+    .iFrameGaleria {
+        display: flex;
+        width: 90%;
+        height: 24rem;
+        justify-content: center;
     }
 }
 
 @media (min-width: 960px) and (max-width: 1025px){
+    .contenedorEstudio {
+        display: block;
+    }
+    .contenedorEstudio__caja{
+        display: block;
+
+        &__imagen{
+            @include alto_y_ancho(85%, 15rem);
+        }
+        &__imagen:hover{
+            @include alto_y_ancho($width100, 18rem);
+        }
+    }
     .contenedorEstudio{
         display: inline-block;
     }
@@ -926,6 +957,17 @@
         font-size: 1.25rem;
         line-height: 1.75rem;
         padding: 1rem 1rem 1rem 3rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 960px){
+    .seccion {
+        height: 60rem;
+    }
+    .seccion .capa {
+        height: 60rem;
+    }
+    .seccion:hover .capa {
+        height: 60rem;
     }
 }
 
