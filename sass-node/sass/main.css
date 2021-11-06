@@ -185,9 +185,12 @@ body {
 .contenedorCards__titulo {
   font-size: 2rem;
   width: 100%;
+  text-align: center;
+  color: #f31844;
 }
 .contenedorCards__parrafo {
   font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .contenedorLocutor {
@@ -219,6 +222,7 @@ body {
   font-size: 1rem;
   font-weight: 300;
   text-align: justify;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .contenedorProyecto {
@@ -302,7 +306,7 @@ body {
 
   .contenedorProyecto__card {
     width: 24rem;
-    height: 38rem;
+    height: 45rem;
   }
   .contenedorProyecto__card__imagen {
     width: 15rem;
@@ -317,8 +321,8 @@ body {
   }
 
   .contenedorLocutor__card {
-    width: 43%;
-    height: 35rem;
+    width: 40%;
+    height: 40rem;
   }
   .contenedorLocutor__card__imagen {
     width: 100%;
@@ -334,6 +338,7 @@ body {
   .contenedorProyecto__card {
     display: flexbox;
     width: 42%;
+    height: 50rem;
   }
   .contenedorProyecto__card__imagen {
     width: 100%;
@@ -398,7 +403,7 @@ body {
   padding: 0.7em;
   border: none;
   background: none;
-  border-bottom: 1px solid #d63031;
+  border: 2px solid #d63031;
   outline: none;
   color: white;
 }
@@ -478,6 +483,7 @@ body {
   height: 400px;
 }
 .cajaProfesional__datos {
+  font-family: "Times New Roman", Times, serif;
   padding: 1rem;
 }
 .cajaProfesional__datos__resumen {
@@ -512,6 +518,14 @@ body {
   display: inline-flex;
 }
 
+.listaPublicidades {
+  list-style: none;
+}
+
+.listaPersonajes {
+  list-style: none;
+}
+
 .iFrameProfesionales {
   width: 42%;
   height: 20rem;
@@ -535,10 +549,6 @@ body {
   font-size: 1.2rem;
 }
 
-#botonModalInformacion {
-  margin: 1.5rem 1rem 1.25rem 1rem;
-}
-
 @media (max-width: 576px) {
   .cajaProfesional {
     display: block;
@@ -556,9 +566,9 @@ body {
   }
 
   .iFrameProfesionales {
-    width: 17rem;
+    width: 95%;
     height: 12rem;
-    margin: 0.5rem 1.25rem;
+    margin: 0.5rem;
   }
 
   #listasDeLeto {
@@ -585,7 +595,7 @@ body {
   }
 
   .iFrameProfesionales {
-    width: 42%;
+    width: 40%;
     height: 15rem;
     margin: 0.5rem 2rem;
   }
@@ -604,10 +614,7 @@ body {
 /*=================Aplicando SASS en las secciones del archivo galería.html=========================*/
 #nombreSeccionImagenes {
   color: gold;
-  font-size: 3rem;
-  line-height: normal;
-  text-align: left;
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2rem 0 2rem 1rem;
   -webkit-animation-duration: 2.5s;
           animation-duration: 2.5s;
   -webkit-animation-name: seccionImagenes;
@@ -712,10 +719,7 @@ body {
 
 #nombreSeccionAudios {
   color: gold;
-  font-size: 3rem;
-  line-height: normal;
-  text-align: left;
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2rem 0 2rem 1rem;
   -webkit-animation-duration: 2.5s;
           animation-duration: 2.5s;
   -webkit-animation-name: seccionAudios;
@@ -772,15 +776,14 @@ body {
 .contenedorAudios__contenido__descripcion {
   color: aliceblue;
   padding-top: 1rem;
+  font-family: "Times New Roman", Times, serif;
   text-align: center;
+  font-size: 1.15rem;
 }
 
 #nombreSeccionVideos {
   color: gold;
-  font-size: 3rem;
-  line-height: normal;
-  text-align: left;
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 2rem 0 2rem 1rem;
   -webkit-animation-duration: 2.5s;
           animation-duration: 2.5s;
   -webkit-animation-name: seccionVideos;
@@ -1027,9 +1030,9 @@ body {
 }
 /*==================Aplicando SASS en las secciones del archivo empresas.html========================*/
 .tituloPrincipalEmpresas {
-  color: #ffb731;
-  padding: 1.5rem 1rem 2rem 1rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: gold;
+  margin: 2rem 0 2rem 1rem;
+  font-family: "Times New Roman", Times, serif;
   font-size: 3rem;
 }
 
@@ -1078,13 +1081,10 @@ a, a:hover {
   font-size: 80%;
 }
 .postcard .postcard__title {
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 .postcard .postcard__img {
-  max-height: 180px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   position: relative;
 }
 .postcard .postcard__img_link {
@@ -1103,6 +1103,8 @@ a, a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.25rem;
 }
 .postcard .postcard__preview-txt {
   overflow: hidden;
@@ -1149,6 +1151,12 @@ a, a:hover {
   width: 100px;
 }
 
+@media (max-width: 576px) {
+  .postcard__img {
+    width: 10rem;
+    height: 20rem;
+  }
+}
 @media screen and (min-width: 769px) {
   .postcard {
     flex-wrap: inherit;
@@ -1342,12 +1350,15 @@ a, a:hover {
 .footer__tabla {
   margin: 0 auto;
 }
+.footer__tabla__subtitulo {
+  text-align: center;
+}
 .footer__tabla__seccion {
-  padding: 0 0.75rem;
+  padding: 0 2.5rem;
+  text-align: center;
 }
 .footer__tabla ul {
   list-style: none;
-  padding: 1rem;
 }
 
 #copyRight {
@@ -1357,6 +1368,9 @@ a, a:hover {
 }
 
 @media (max-width: 576px) {
+  .footer {
+    margin: 0 auto;
+  }
   .footer__tabla__subtitulo {
     font-size: 0.55rem;
     text-align: center;
@@ -1368,5 +1382,15 @@ a, a:hover {
   .footer__tabla__seccion ul li img {
     display: block;
     margin: 0 auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 960px) {
+  .footer__tabla__seccion {
+    padding: 0 0.5rem;
+  }
+}
+@media (min-width: 960px) and (max-width: 1025px) {
+  .footer__tabla__seccion {
+    padding: 0 1.5rem;
   }
 }/*# sourceMappingURL=main.css.map */
