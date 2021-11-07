@@ -1391,6 +1391,7 @@ a, a:hover {
     text-align: center;
   }
   .footer__tabla__seccion {
+    padding: 0 0.85rem;
     text-align: center;
     font-size: 0.5rem;
   }
