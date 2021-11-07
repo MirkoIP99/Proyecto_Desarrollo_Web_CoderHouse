@@ -128,6 +128,16 @@
     &__imagenSlide{
         @include alto_y_ancho($width100, 45rem);
     }
+    &__slideTexto{
+        background-color: rgba(0, 0, 0, 0.7);
+
+        & h5{
+            font-size: 2rem;
+        }
+        & p{
+            font-size: 1.5rem;
+        }
+    }
 }
 
 .sectionIndex{
@@ -267,6 +277,16 @@
     
         &__imagenSlide{
             @include alto_y_ancho($width100, 32rem);
+        }
+
+        &__slideTexto{
+
+            & h5{
+                font-size: 1.4rem;
+            }
+            & p{
+                font-size: 1rem;
+            }
         }
     }
     .contenedorCards{
