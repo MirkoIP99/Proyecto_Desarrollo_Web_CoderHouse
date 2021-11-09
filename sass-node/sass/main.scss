@@ -76,19 +76,18 @@
 }
 
 /*===========================Aplicando SASS en el NavBar de los HTMls===============================*/
+
 .menu {
     text-align: center;
 }
 
 .menuContenedor {
     width: $width100;
+    margin: 0 auto;
 }
 
 .botonMenu {
     display: block;
-    float: left;
-    width: 90%;
-    margin: 1rem;
 }
 
 .menu ul {
@@ -111,14 +110,46 @@
     background-color: #d63031;
 }
 
-@include movilNavBar {
-    .menu ul li {
-        display: block;
-        text-align: left;
-        width: 90%;
-        padding: 1rem 0;
+.subMenuNav {
+    text-align: center;
+
+    & li {
+        width: $width100;
+    }
+    & li a {
+        width: $width100;
     }
 }
+
+@include movilNavBar {
+    .menu {
+        max-width: $width100;
+    }
+    .menu ul li {
+        width: 90%;
+        padding: 1rem 0;
+
+        & a {
+            font-size: 1.3rem;
+        }
+    }
+    .botonMenu {
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+@media (max-width: 330px) { /*Este media querie es para moviles con ancho de pantalla de hasta 330px*/
+    .menu {
+        max-width: $width100;
+    }
+    .menu ul li a{
+        font-size: 1rem;
+    }
+}
+
+
 
 /*===================Aplicando SASS en las secciones del archivo index.html========================*/
 
@@ -149,8 +180,6 @@
 .tituloSeccion{
     color: $colorGold;
     display: block;
-    font-style: oblique;
-    font-weight: lighter;
     font-size: 3rem;
     font-family: 'Times New Roman', Times, serif;
     text-align: initial;
@@ -311,7 +340,7 @@
 
     .contenedorProyecto__card {
         width: 24rem;
-        height: 45rem;
+        height: 49rem;
 
         &__imagen {
             width: 15rem;
@@ -1385,7 +1414,7 @@ a, a:hover {
             text-align: center;
         }
         &__tabla__seccion {
-            padding: 0 0.85rem;
+            padding: 0 0.5rem;
             text-align: center;
             font-size: 0.5rem;
         }

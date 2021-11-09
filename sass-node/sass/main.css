@@ -88,13 +88,11 @@ body {
 
 .menuContenedor {
   width: 100%;
+  margin: 0 auto;
 }
 
 .botonMenu {
   display: block;
-  float: left;
-  width: 90%;
-  margin: 1rem;
 }
 
 .menu ul {
@@ -116,12 +114,42 @@ body {
   background-color: #d63031;
 }
 
+.subMenuNav {
+  text-align: center;
+}
+.subMenuNav li {
+  width: 100%;
+}
+.subMenuNav li a {
+  width: 100%;
+}
+
 @media (max-width: 576px) {
+  .menu {
+    max-width: 100%;
+  }
+
   .menu ul li {
-    display: block;
-    text-align: left;
     width: 90%;
     padding: 1rem 0;
+  }
+  .menu ul li a {
+    font-size: 1.3rem;
+  }
+
+  .botonMenu {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media (max-width: 330px) {
+  /*Este media querie es para moviles con ancho de pantalla de hasta 330px*/
+  .menu {
+    max-width: 100%;
+  }
+
+  .menu ul li a {
+    font-size: 1rem;
   }
 }
 /*===================Aplicando SASS en las secciones del archivo index.html========================*/
@@ -152,8 +180,6 @@ body {
 .tituloSeccion {
   color: gold;
   display: block;
-  font-style: oblique;
-  font-weight: lighter;
   font-size: 3rem;
   font-family: "Times New Roman", Times, serif;
   text-align: initial;
@@ -321,7 +347,7 @@ body {
 
   .contenedorProyecto__card {
     width: 24rem;
-    height: 45rem;
+    height: 49rem;
   }
   .contenedorProyecto__card__imagen {
     width: 15rem;
@@ -1391,7 +1417,7 @@ a, a:hover {
     text-align: center;
   }
   .footer__tabla__seccion {
-    padding: 0 0.85rem;
+    padding: 0 0.5rem;
     text-align: center;
     font-size: 0.5rem;
   }
