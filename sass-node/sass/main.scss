@@ -15,19 +15,14 @@
         margin: 0 auto;
 
         &__iconoContacto{
-            @include alto_y_ancho(7.5rem, 5rem);
+            @include ancho_y_alto(7.5rem, 5rem);
         }
     }
 }
 
 .iconoPaginaWeb{
-    @include alto_y_ancho(12rem, 12rem);
+    @include ancho_y_alto(12rem, 12rem);
     margin: 0.25rem 1rem 0 1rem;
-    transition: all 1.5s;
-}
-
-.iconoPaginaWeb:hover{
-    @include alto_y_ancho(15rem, 15rem);
 }
 
 .cajaBusqueda{
@@ -56,7 +51,7 @@
 
 @include movilHeader{
     .divIconos__tabla__iconoContacto{
-        @include alto_y_ancho(4rem, 5rem);
+        @include ancho_y_alto(4rem, 5rem);
     }
     .cajaBusqueda{
         display: map-get($map: $varsCajaBusqueda, $key: 'display');
@@ -154,10 +149,10 @@
 /*===================Aplicando SASS en las secciones del archivo index.html========================*/
 
 .carousel{
-    @include alto_y_ancho($width100, 45rem);
+    @include ancho_y_alto($width100, 45rem);
 
     &__imagenSlide{
-        @include alto_y_ancho($width100, 45rem);
+        @include ancho_y_alto($width100, 45rem);
     }
     &__slideTexto{
         background-color: rgba(0, 0, 0, 0.7);
@@ -223,8 +218,7 @@
     margin: auto;
 
     &__card{
-        width: 22rem;
-        height: 35rem;
+        @include ancho_y_alto(22rem, 35rem);
         border-radius: 1rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
         overflow: hidden;
@@ -237,8 +231,7 @@
 
         &__imagen{
             margin: 1rem 0;
-            width: 18rem;
-            height: 16rem;
+            @include ancho_y_alto(18rem, 16rem);
         }
         &__parrafo{
             font-size: 1rem;
@@ -257,8 +250,7 @@
     margin: auto;
 
     &__card{
-        width: 40%;
-        height: 42rem;
+        @include ancho_y_alto(40%, 42rem);
         border-radius: 1rem;
         box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
         overflow: hidden;
@@ -271,8 +263,7 @@
 
         &__imagen{
             margin: 1rem 0;
-            width: $width100;
-            height: 22rem;
+            @include ancho_y_alto ($width100, 22rem);
         }
         &__parrafo{
             font-size: 1.25rem;
@@ -302,10 +293,10 @@
 
 @media (max-width: 576px){
     .carousel{
-        @include alto_y_ancho($width100, 32rem);
+        @include ancho_y_alto($width100, 32rem);
     
         &__imagenSlide{
-            @include alto_y_ancho($width100, 32rem);
+            @include ancho_y_alto($width100, 32rem);
         }
 
         &__slideTexto{
@@ -330,8 +321,7 @@
         line-height: 3rem;
     }
     .contenedorLocutor__card {
-        width: 24rem;
-        height: 35rem;
+        @include ancho_y_alto(24rem, 35rem);
 
         &__imagen {
             width: 15rem;
@@ -339,8 +329,7 @@
     }
 
     .contenedorProyecto__card {
-        width: 24rem;
-        height: 49rem;
+        @include ancho_y_alto(24rem, 49rem);
 
         &__imagen {
             width: 15rem;
@@ -357,8 +346,7 @@
         }
     }
     .contenedorLocutor__card {
-        width: 40%;
-        height: 40rem;
+        @include ancho_y_alto(40%, 40rem);
 
         &__imagen {
             width: 100%;
@@ -372,12 +360,10 @@
     }
     .contenedorProyecto__card {
         display: flexbox;
-        width: 42%;
-        height: 50rem;
+        @include ancho_y_alto(42%, 50rem);
 
         &__imagen {
-            width: $width100;
-            height: 18rem;
+            @include ancho_y_alto($width100, 18rem);
         }
     }
 }
@@ -401,8 +387,7 @@
         width: 42%;
 
         &__imagen {
-            width: $width100;
-            height: 23rem;
+            @include ancho_y_alto($width100, 23rem);
         }
     }
 }
@@ -528,11 +513,11 @@
 
     &__imagen{
         padding: 1rem;
-        @include alto_y_ancho(300px, 350px);
+        @include ancho_y_alto(300px, 350px);
         transition: width 2s, height 2s;
     }
     &__imagen:hover{
-        @include alto_y_ancho(350px, 400px);
+        @include ancho_y_alto(350px, 400px);
     }
     &__datos{
         font-family: 'Times New Roman', Times, serif;
@@ -580,8 +565,7 @@
 }
 
 .iFrameProfesionales{
-    width: 42%;
-    height: 20rem;
+    @include ancho_y_alto(42%, 20rem);
     margin: 0.5rem 2rem;
 }
 
@@ -608,24 +592,21 @@
     border-radius: 7px;
 
     & .contenedorImagenesProfesionales__imagen {
-        width: 30%;
+        @include ancho_y_alto(30%, 25rem);
         position: relative;
-        height: 25rem;
         box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
         margin: 1rem;
     }
 
     &__imagen img {
-        width: $width100;
-        height: $height100;
+        @include ancho_y_alto($width100, $height100);
     }
     &__imagen__overlay {
         position: absolute;
         bottom: 0;
         left: 0;
         background-color: rgba(66, 66, 66, 0.781);
-        width: $width100;
-        height: 0;
+        @include ancho_y_alto($width100, 0);
         transition: 1s;
         overflow: hidden;
 
@@ -655,16 +636,15 @@
 
         &__imagen{
             display: flex;
-            @include alto_y_ancho(16rem, 18rem);
+            @include ancho_y_alto(16rem, 18rem);
             margin: 0 auto;
         }
         &__imagen:hover{
-            @include alto_y_ancho(18rem, 20rem);
+            @include ancho_y_alto(18rem, 20rem);
         }
     }
     .iFrameProfesionales {
-        width: 95%;
-        height: 12rem;
+        @include ancho_y_alto(95%, 12rem);
         margin: 0.5rem;
     }
     @each $locutor in Leto, Adrian {
@@ -686,16 +666,15 @@
 
         &__imagen{
             display: flex;
-            @include alto_y_ancho(25rem, 26rem);
+            @include ancho_y_alto(25rem, 26rem);
             margin: 0 auto;
         }
         &__imagen:hover{
-            @include alto_y_ancho(27rem, 28rem);
+            @include ancho_y_alto(27rem, 28rem);
         }
     }
     .iFrameProfesionales {
-        width: 40%;
-        height: 15rem;
+        @include ancho_y_alto(40%, 15rem);
         margin: 0.5rem 2rem;
     }
     .contenedorImagenesProfesionales {
@@ -711,8 +690,7 @@
         display: inline-flex;
     }
     .iFrameProfesionales {
-        width: 25rem;
-        height: 20rem;
+        @include ancho_y_alto(25rem, 20rem);
         margin: 0.5rem 2.5rem;
     }
 }
@@ -741,13 +719,13 @@
         display: table-cell;
 
         &__imagen{
-            @include alto_y_ancho(18rem, 15rem);
+            @include ancho_y_alto(18rem, 15rem);
             display: block;
             transition: width 2s, height 2s;
             margin: auto;
         }
         &__imagen:hover{
-            @include alto_y_ancho(21rem, 18rem);
+            @include ancho_y_alto(21rem, 18rem);
         }
         &__nombre{
             color: rgb(243, 24, 68);
@@ -774,24 +752,21 @@
     border-radius: 7px;
 
     & .contenedorImagenesGaleria__imagen {
-        width: 30%;
+        @include ancho_y_alto(30%, 18rem);
         position: relative;
-        height: 18rem;
         box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
         margin: 1rem;
     }
 
     &__imagen img {
-        width: $width100;
-        height: $height100;
+        @include ancho_y_alto($width100, $height100);
     }
     &__imagen__overlay {
         position: absolute;
         bottom: 0;
         left: 0;
         background-color: rgba(66, 66, 66, 0.781);
-        width: $width100;
-        height: 0;
+        @include ancho_y_alto($width100, 0);
         transition: 1s;
         overflow: hidden;
 
@@ -834,16 +809,14 @@
 
     &__contenido {
         display: inline-block;
-        width: 32%;
-        height: 22rem;
+        @include ancho_y_alto(32%, 22rem);
 
         &__titulo {
             color: $colorAliceBlue;
             text-align: center;
         }
         &__imagen {
-            width: $width100;
-            height: $height100;
+            @include ancho_y_alto($width100, $height100);
             object-fit: cover;
             padding: 1rem;
         }
@@ -877,8 +850,7 @@
 
 .iFrameGaleria{
     padding: 1rem;
-    width: 42%;
-    height: 20rem;
+    @include ancho_y_alto(42%, 20rem);
     margin: 0.5rem 2rem;
 }
 
@@ -890,10 +862,10 @@
         display: block;
     }
     .contenedorEstudio__caja__imagen{
-        @include alto_y_ancho(85%, 12rem);
+        @include ancho_y_alto(85%, 12rem);
     }
     .contenedorEstudio__caja__imagen:hover{
-        @include alto_y_ancho(95%, 15rem);
+        @include ancho_y_alto(95%, 15rem);
     }
     .contenedorImagenesGaleria {
         width: 95%;
@@ -913,8 +885,7 @@
         }
     }
     .iFrameGaleria{
-        width: 95%;
-        height: 15rem;
+        @include ancho_y_alto(95%, 15rem);
         margin: 0.5rem 0.5rem;
     }
 }
@@ -927,10 +898,10 @@
         display: block;
 
         &__imagen{
-            @include alto_y_ancho(50%, 17rem);
+            @include ancho_y_alto(50%, 17rem);
         }
         &__imagen:hover{
-            @include alto_y_ancho(70%, 20rem);
+            @include ancho_y_alto(70%, 20rem);
         }
     }
     .contenedorImagenesGaleria {
@@ -957,8 +928,7 @@
     }
     .iFrameGaleria {
         display: flex;
-        width: 90%;
-        height: 24rem;
+        @include ancho_y_alto(90%, 24rem);
         justify-content: center;
     }
 }
@@ -971,10 +941,10 @@
         display: block;
 
         &__imagen{
-            @include alto_y_ancho(85%, 15rem);
+            @include ancho_y_alto(85%, 15rem);
         }
         &__imagen:hover{
-            @include alto_y_ancho($width100, 18rem);
+            @include ancho_y_alto($width100, 18rem);
         }
     }
     .contenedorEstudio{
@@ -989,14 +959,12 @@
 
 .seccion{
     position: relative;
-    width: $width100;
-    height: 100vh;
+    @include ancho_y_alto($width100, 100vh);
     overflow: hidden;
 }
 
 .seccion .capa{
-    width: 0%;
-    height: 50vh;
+    @include ancho_y_alto(0, 50vh);
     background-color: rgba(36, 32, 32, 0.8);
     position: absolute;
     top: 0;
@@ -1005,8 +973,7 @@
 }
 
 .seccion:hover .capa{
-    height: 100vh;
-    width: $width100;
+    @include ancho_y_alto($width100, 100vh);
     color: $colorAliceBlue;
 }
 
@@ -1152,8 +1119,7 @@ a, a:hover {
   }
 
   .postcard__bar {
-    width: 50px;
-    height: 10px;
+    @include ancho_y_alto(50px, 10px);
     margin: 10px 0;
     border-radius: 5px;
     background-color: #424242;
@@ -1219,8 +1185,7 @@ a, a:hover {
 
 @media (max-width: 576px) {
     .postcard__img {
-        width: 10rem;
-        height: 20rem;
+        @include ancho_y_alto(10rem, 20rem);
     }
 }
 
@@ -1253,8 +1218,7 @@ a, a:hover {
       display: block;
       background: #222222;
       top: -20%;
-      height: 130%;
-      width: 55px;
+      @include ancho_y_alto(55px, 130%);
     }
 
     &:hover .postcard__img {
@@ -1291,8 +1255,7 @@ a, a:hover {
       display: block;
       
       top: -20%;
-      height: 130%;
-      width: 55px;
+      @include ancho_y_alto(55px, 130%);
     }
 	
   .postcard.dark {

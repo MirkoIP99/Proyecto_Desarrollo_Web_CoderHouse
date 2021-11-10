@@ -28,12 +28,6 @@ body {
   width: 12rem;
   height: 12rem;
   margin: 0.25rem 1rem 0 1rem;
-  transition: all 1.5s;
-}
-
-.iconoPaginaWeb:hover {
-  width: 15rem;
-  height: 15rem;
 }
 
 .cajaBusqueda {
@@ -598,8 +592,8 @@ body {
 }
 .contenedorImagenesProfesionales .contenedorImagenesProfesionales__imagen {
   width: 30%;
-  position: relative;
   height: 25rem;
+  position: relative;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
   margin: 1rem;
 }
@@ -782,8 +776,8 @@ body {
 }
 .contenedorImagenesGaleria .contenedorImagenesGaleria__imagen {
   width: 30%;
-  position: relative;
   height: 18rem;
+  position: relative;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
   margin: 1rem;
 }
@@ -1038,7 +1032,7 @@ body {
 }
 
 .seccion .capa {
-  width: 0%;
+  width: 0;
   height: 50vh;
   background-color: rgba(36, 32, 32, 0.8);
   position: absolute;
@@ -1048,8 +1042,8 @@ body {
 }
 
 .seccion:hover .capa {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   color: aliceblue;
 }
 
@@ -1281,8 +1275,8 @@ a, a:hover {
     display: block;
     background: #222222;
     top: -20%;
-    height: 130%;
     width: 55px;
+    height: 130%;
   }
   .postcard:hover .postcard__img {
     transform: scale(1.1);
@@ -1312,8 +1306,8 @@ a, a:hover {
     position: absolute;
     display: block;
     top: -20%;
-    height: 130%;
     width: 55px;
+    height: 130%;
   }
 
   .postcard.dark .postcard__text:before {
