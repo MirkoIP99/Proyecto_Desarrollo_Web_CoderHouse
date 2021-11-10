@@ -569,16 +569,14 @@
     font-size: 1rem;
 }
 
-#listasDeAdrian{
-    display: inline-flex;
-}
-
 .listaPublicidades {
     list-style: none;
+    display: inline-block;
 }
 
 .listaPersonajes {
     list-style: none;
+    display: inline-block;
 }
 
 .iFrameProfesionales{
@@ -598,6 +596,55 @@
     .lista#{$claseDeLista}{
         color: $colorAzure;
         font-size: 1.2rem;
+    }
+}
+
+.contenedorImagenesProfesionales {
+    display: flex;
+    width: $width100;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 7px;
+
+    & .contenedorImagenesProfesionales__imagen {
+        width: 30%;
+        position: relative;
+        height: 25rem;
+        box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+        margin: 1rem;
+    }
+
+    &__imagen img {
+        width: $width100;
+        height: $height100;
+    }
+    &__imagen__overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(66, 66, 66, 0.781);
+        width: $width100;
+        height: 0;
+        transition: 1s;
+        overflow: hidden;
+
+
+        & h2 {
+            color: $colorAliceBlue;
+            font-size: 2rem;
+            font-weight: 300;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__imagen:hover .contenedorImagenesProfesionales__imagen__overlay{
+        height: $height100;
+        cursor: crosshair;
     }
 }
 
@@ -625,6 +672,12 @@
             display: inline;
         }   
     }
+    .contenedorImagenesProfesionales {
+        width: 95%;
+    }
+    .contenedorImagenesProfesionales .contenedorImagenesProfesionales__imagen {
+        width: 90%;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 960px){
@@ -644,6 +697,12 @@
         width: 40%;
         height: 15rem;
         margin: 0.5rem 2rem;
+    }
+    .contenedorImagenesProfesionales {
+        width: 85%;
+    }
+    .contenedorImagenesProfesionales .contenedorImagenesProfesionales__imagen {
+        width: 40%;
     }
 }
 
@@ -706,7 +765,6 @@
     }
 }
 
-
 .contenedorImagenesGaleria {
     display: flex;
     width: $width100;
@@ -752,7 +810,7 @@
 
     &__imagen:hover .contenedorImagenesGaleria__imagen__overlay{
         height: $height100;
-        cursor: pointer;
+        cursor: crosshair;
     }
 }
 
