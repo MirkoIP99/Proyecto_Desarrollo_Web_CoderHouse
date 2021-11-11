@@ -87,6 +87,8 @@ body {
 
 .botonMenu {
   display: block;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .menu ul {
@@ -130,11 +132,6 @@ body {
   .menu ul li a {
     font-size: 1.3rem;
   }
-
-  .botonMenu {
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-  }
 }
 @media (max-width: 330px) {
   /*Este media querie es para moviles con ancho de pantalla de hasta 330px*/
@@ -142,8 +139,12 @@ body {
     max-width: 100%;
   }
 
+  .menu ul {
+    padding-left: 0;
+  }
+
   .menu ul li a {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 /*===================Aplicando SASS en las secciones del archivo index.html========================*/
@@ -303,6 +304,27 @@ body {
   background: #2a3036;
 }
 
+@media (max-width: 285px) {
+  .tituloSeccion {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 285px) {
+  .contenedorLocutor__card {
+    height: 38rem !important;
+  }
+
+  .contenedorLocutor__card__imagen {
+    width: 12rem !important;
+  }
+
+  .contenedorProyecto__card {
+    height: 53rem !important;
+  }
+  .contenedorProyecto__card__imagen {
+    width: 12rem !important;
+  }
+}
 @media (max-width: 576px) {
   .carousel {
     width: 100%;
@@ -352,7 +374,7 @@ body {
     margin: 0 auto;
   }
   .contenedorCards__card {
-    max-width: 42%;
+    max-width: 45%;
   }
 
   .contenedorLocutor__card {
@@ -373,7 +395,7 @@ body {
   .contenedorProyecto__card {
     display: flexbox;
     width: 42%;
-    height: 50rem;
+    height: 42rem;
   }
   .contenedorProyecto__card__imagen {
     width: 100%;
@@ -469,6 +491,15 @@ body {
   grid-column: 1/3;
 }
 
+@media (max-width: 285px) {
+  .contenidoContacto__envoltura__info {
+    font-size: 0.75rem !important;
+  }
+
+  #imagenHomero {
+    width: 10rem !important;
+  }
+}
 @media (max-width: 576px) {
   .contenidoContacto__envoltura {
     display: block;
@@ -542,7 +573,7 @@ body {
   transition: background-color 1s ease-out;
 }
 
-#listasDeLeto {
+#listasMultiples {
   display: inline-flex;
   padding: 2rem;
   margin: auto;
@@ -626,6 +657,27 @@ body {
   cursor: crosshair;
 }
 
+@media (max-width: 285px) {
+  #listasMultiples {
+    display: block !important;
+    font-size: 1rem !important;
+  }
+
+  .iFrameProfesionales {
+    width: 92% !important;
+    height: 10rem !important;
+    margin: 0.75rem 0.5rem !important;
+  }
+
+  .cajaProfesional__imagen {
+    width: 12rem !important;
+    height: 15rem !important;
+  }
+  .cajaProfesional__imagen:hover {
+    width: 13rem !important;
+    height: 16rem !important;
+  }
+}
 @media (max-width: 576px) {
   .cajaProfesional {
     display: block;
@@ -646,14 +698,6 @@ body {
     width: 95%;
     height: 12rem;
     margin: 0.5rem;
-  }
-
-  #listasDeLeto {
-    display: inline;
-  }
-
-  #listasDeAdrian {
-    display: inline;
   }
 
   .contenedorImagenesProfesionales {
@@ -686,11 +730,11 @@ body {
   }
 
   .contenedorImagenesProfesionales {
-    width: 85%;
+    width: 90%;
   }
 
   .contenedorImagenesProfesionales .contenedorImagenesProfesionales__imagen {
-    width: 40%;
+    width: 45%;
   }
 }
 @media (min-width: 960px) and (max-width: 1025px) {
@@ -907,6 +951,11 @@ body {
   margin: 0.5rem 2rem;
 }
 
+@media (max-width: 285px) {
+  .iFrameGaleria {
+    margin: 0.5rem 0.25rem !important;
+  }
+}
 @media (max-width: 576px) {
   .contenedorEstudio {
     display: block;
@@ -1091,6 +1140,19 @@ body {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 285px) {
+  .seccion {
+    height: 62rem !important;
+  }
+
+  .seccion .capa {
+    height: 62rem !important;
+  }
+
+  .seccion:hover .capa {
+    height: 62rem !important;
+  }
+}
 @media (max-width: 576px) {
   .seccion:hover .capa h3 {
     padding: 1.25rem;
@@ -1447,8 +1509,14 @@ a, a:hover {
   text-align: center;
 }
 .footer__tabla__seccion {
-  padding: 0 2.5rem;
+  padding: 0 4.5rem;
   text-align: center;
+}
+.footer__tabla__seccion ul {
+  padding: 0;
+}
+.footer__tabla__seccion ul li {
+  text-align: left;
 }
 .footer__tabla ul {
   list-style: none;
@@ -1466,12 +1534,26 @@ a, a:hover {
   }
   .footer__tabla__subtitulo {
     font-size: 0.55rem;
-    text-align: center;
   }
   .footer__tabla__seccion {
-    padding: 0 0.5rem;
-    text-align: center;
+    padding: 0 2rem;
     font-size: 0.5rem;
+  }
+  .footer__tabla__seccion ul li {
+    text-align: center;
+  }
+  .footer__tabla__seccion ul li img {
+    display: block;
+  }
+}
+@media (max-width: 285px) {
+  /*Samsung Galaxy Fold*/
+  .footer {
+    width: auto;
+    margin: 0 auto;
+  }
+  .footer__tabla__seccion {
+    padding: 0 1rem;
   }
   .footer__tabla__seccion ul li img {
     display: block;
@@ -1480,7 +1562,7 @@ a, a:hover {
 }
 @media (min-width: 576px) and (max-width: 960px) {
   .footer__tabla__seccion {
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
 }
 @media (min-width: 960px) and (max-width: 1025px) {

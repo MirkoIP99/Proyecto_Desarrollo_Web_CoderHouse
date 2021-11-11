@@ -83,6 +83,8 @@
 
 .botonMenu {
     display: block;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .menu ul {
@@ -128,10 +130,6 @@
             font-size: 1.3rem;
         }
     }
-    .botonMenu {
-        padding: 1rem;
-        margin-bottom: 0.5rem;
-    }
 }
 
 
@@ -139,11 +137,13 @@
     .menu {
         max-width: $width100;
     }
+    .menu ul {
+        padding-left: 0;
+    }
     .menu ul li a{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
-
 
 
 /*===================Aplicando SASS en las secciones del archivo index.html========================*/
@@ -291,6 +291,28 @@
     background: rgb(42, 48, 54);
 }
 
+@include samsungGalaxyFold{
+    .tituloSeccion{
+        font-size: 2.5rem;
+    }
+}
+
+@include samsungGalaxyFold {
+    .contenedorLocutor__card {
+        height: 38rem !important;
+    }
+    .contenedorLocutor__card__imagen {
+        width: 12rem !important;
+    }
+    .contenedorProyecto__card {
+        height: 53rem !important;
+
+        &__imagen {
+            width: 12rem !important;
+        }
+    }
+}
+
 @media (max-width: 576px){
     .carousel{
         @include ancho_y_alto($width100, 32rem);
@@ -342,7 +364,7 @@
         margin: 0 auto;
     
         &__card {
-            max-width: 42%;
+            max-width: 45%;
         }
     }
     .contenedorLocutor__card {
@@ -360,7 +382,7 @@
     }
     .contenedorProyecto__card {
         display: flexbox;
-        @include ancho_y_alto(42%, 50rem);
+        @include ancho_y_alto(42%, 42rem);
 
         &__imagen {
             @include ancho_y_alto($width100, 18rem);
@@ -466,6 +488,17 @@
     grid-column: 1/3;
 }
 
+@include samsungGalaxyFold {
+    .contenidoContacto__envoltura{
+        &__info {
+            font-size: 0.75rem !important;
+        }
+    }
+    #imagenHomero {
+        width: 10rem !important;
+    }
+}
+
 @media (max-width: 576px){
     .contenidoContacto__envoltura{
         display: block;
@@ -547,7 +580,7 @@
     }
 }
 
-#listasDeLeto{
+#listasMultiples{
     display: inline-flex;
     padding: 2rem;
     margin: auto;
@@ -629,6 +662,27 @@
     }
 }
 
+@include samsungGalaxyFold {
+    #listasMultiples {
+        display: block !important;
+        font-size: 1rem !important;
+    }
+    .iFrameProfesionales {
+        width: 92% !important;
+        height: 10rem !important;
+        margin: 0.75rem 0.5rem !important;
+    }
+    .cajaProfesional__imagen {
+        width: 12rem !important;
+        height: 15rem !important;
+
+        &:hover {
+            width: 13rem !important;
+            height: 16rem !important;
+        }
+    }
+}
+
 @media (max-width: 576px){
     .cajaProfesional{
         display: block;
@@ -646,11 +700,6 @@
     .iFrameProfesionales {
         @include ancho_y_alto(95%, 12rem);
         margin: 0.5rem;
-    }
-    @each $locutor in Leto, Adrian {
-        #listasDe#{$locutor}{
-            display: inline;
-        }   
     }
     .contenedorImagenesProfesionales {
         width: 95%;
@@ -678,10 +727,10 @@
         margin: 0.5rem 2rem;
     }
     .contenedorImagenesProfesionales {
-        width: 85%;
+        width: 90%;
     }
     .contenedorImagenesProfesionales .contenedorImagenesProfesionales__imagen {
-        width: 40%;
+        width: 45%;
     }
 }
 
@@ -854,6 +903,12 @@
     margin: 0.5rem 2rem;
 }
 
+@include samsungGalaxyFold {
+    .iFrameGaleria{
+        margin: 0.5rem 0.25rem !important;
+    }
+}
+
 @media (max-width: 576px){
     .contenedorEstudio{
         display: block;
@@ -1018,6 +1073,18 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@include samsungGalaxyFold {
+    .seccion {
+        height: 62rem !important;
+    }
+    .seccion .capa {
+        height: 62rem !important;
+    }
+    .seccion:hover .capa {
+        height: 62rem !important;
+    }
 }
 
 @media (max-width: 576px){
@@ -1412,8 +1479,16 @@ a, a:hover {
             text-align: center;
         }
         &__seccion{
-            padding: 0 2.5rem;
+            padding: 0 4.5rem;
             text-align: center;
+
+            & ul {
+                padding: 0;
+
+                & li {
+                    text-align: left;
+                }
+            }
         }
         & ul {
             list-style: none;
@@ -1432,12 +1507,27 @@ a, a:hover {
 
         &__tabla__subtitulo {
             font-size: 0.55rem;
-            text-align: center;
         }
         &__tabla__seccion {
-            padding: 0 0.5rem;
-            text-align: center;
+            padding: 0 2rem;
             font-size: 0.5rem;
+        }
+        &__tabla__seccion ul li {
+            text-align: center;
+        }
+        &__tabla__seccion ul li img{
+            display: block;
+        }
+    }
+}
+
+@include samsungGalaxyFold{/*Samsung Galaxy Fold*/
+    .footer{
+        width: auto;
+        margin: 0 auto;
+
+        &__tabla__seccion {
+            padding: 0 1rem;
         }
         &__tabla__seccion ul li img{
             display: block;
@@ -1450,7 +1540,7 @@ a, a:hover {
     .footer{
 
         &__tabla__seccion{
-            padding: 0 0.5rem;
+            padding: 0 0.75rem;
         }
     }
 }
