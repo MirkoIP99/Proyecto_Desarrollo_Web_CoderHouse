@@ -56,11 +56,20 @@
     .cajaBusqueda{
         display: map-get($map: $varsCajaBusqueda, $key: 'display');
         width: 10rem;
-        margin: 1rem 1.5rem;
+        margin: 1rem;
     }
     .submitBusqueda{
         display: map-get($map: $varsCajaBusqueda, $key: 'display');
         margin: 1rem 0.25rem;
+    }
+}
+
+@include samsungGalaxyFold {
+    .cajaBusqueda {
+        width: 7.5rem;
+    }
+    .submitBusqueda {
+        width: 6rem;
     }
 }
 
@@ -127,21 +136,21 @@
         padding: 1rem 0;
 
         & a {
-            font-size: 1.3rem;
+            font-size: 1rem !important;
         }
     }
 }
 
 
-@media (max-width: 330px) { /*Este media querie es para moviles con ancho de pantalla de hasta 330px*/
+@include samsungGalaxyFold {
     .menu {
-        max-width: $width100;
+        max-width: $width100 !important;
     }
     .menu ul {
-        padding-left: 0;
+        padding-left: 0 !important;
     }
-    .menu ul li a{
-        font-size: 0.8rem;
+    .menu ul li a {
+        font-size: 0.85rem !important;
     }
 }
 
@@ -517,7 +526,7 @@
         }
     }
     #imagenHomero {
-        width: 15rem;
+        width: 14rem;
     }
 }
 
@@ -589,12 +598,10 @@
 
 .listaPublicidades {
     list-style: none;
-    display: inline-block;
 }
 
 .listaPersonajes {
     list-style: none;
-    display: inline-block;
 }
 
 .iFrameProfesionales{
@@ -696,6 +703,9 @@
         &__imagen:hover{
             @include ancho_y_alto(18rem, 20rem);
         }
+    }
+    #listasMultiples {
+        display: block;
     }
     .iFrameProfesionales {
         @include ancho_y_alto(95%, 12rem);
@@ -1077,13 +1087,13 @@
 
 @include samsungGalaxyFold {
     .seccion {
-        height: 62rem !important;
+        height: 55rem !important;
     }
     .seccion .capa {
-        height: 62rem !important;
+        height: 55rem !important;
     }
     .seccion:hover .capa {
-        height: 62rem !important;
+        height: 55rem !important;
     }
 }
 
@@ -1506,17 +1516,18 @@ a, a:hover {
         margin: 0 auto;
 
         &__tabla__subtitulo {
-            font-size: 0.55rem;
+            font-size: 1rem;
         }
         &__tabla__seccion {
-            padding: 0 2rem;
-            font-size: 0.5rem;
+            padding: 0 0.9rem;
+            font-size: 0.8rem;
         }
         &__tabla__seccion ul li {
             text-align: center;
         }
         &__tabla__seccion ul li img{
             display: block;
+            margin: 0 auto;
         }
     }
 }
@@ -1527,7 +1538,7 @@ a, a:hover {
         margin: 0 auto;
 
         &__tabla__seccion {
-            padding: 0 1rem;
+            padding: 0 0.5rem;
         }
         &__tabla__seccion ul li img{
             display: block;
@@ -1540,16 +1551,19 @@ a, a:hover {
     .footer{
 
         &__tabla__seccion{
-            padding: 0 0.75rem;
+            padding: 0 1.25rem;
         }
     }
 }
 
 @include netbookFooter{
     .footer{
-
+        &__tabla__subtitulo {
+            font-size: 2rem;
+        }
         &__tabla__seccion{
-            padding: 0 1.5rem;
+            padding: 0 4rem;
+            font-size: 1.75rem;
         }
     }
 }
